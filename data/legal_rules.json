@@ -1,18 +1,82 @@
 [
   {
-    "rule_id": "LR-001",
-    "category": "Non-Compete",
-    "rule_statement": "Non-compete clauses extending beyond the term of the contract are generally void under Section 27 of the Indian Contract Act.",
-    "trigger_condition": "If clause restricts contractor from working with competitors after contract terminates.",
-    "severity": "High",
-    "citation": "STAT-001"
+    "id": "LR-001",
+    "title": "Overbroad IP Assignment",
+    "applicable_clause_types": ["ip_assignment"],
+    "pattern_keywords": ["assignment of all intellectual property", "including pre-existing", "all rights whatsoever"],
+    "severity": "high",
+    "explanation": "Assigning pre-existing IP beyond project scope is non-standard and likely unenforceable against the contractor's prior works.",
+    "citation": "Indian Copyright Act, §17 proviso",
+    "remediation_template": "Narrow assignment to work product created during engagement period only."
   },
   {
-    "rule_id": "LR-002",
-    "category": "IP Assignment",
-    "rule_statement": "Assignment of pre-existing intellectual property must be explicitly compensated. Broad assignment without boundaries risks the freelancer's prior toolkits/codebases.",
-    "trigger_condition": "If clause assigns 'all IP' or 'pre-existing IP' rather than 'work product'.",
-    "severity": "Critical",
-    "citation": "STAT-002"
+    "id": "LR-002",
+    "title": "Non-Compete Post-Employment",
+    "applicable_clause_types": ["non_compete"],
+    "pattern_keywords": ["non-compete", "refrain from competing", "shall not engage in"],
+    "severity": "high",
+    "explanation": "Non-compete clauses extending beyond employment/engagement are void under Indian Contract Act §27.",
+    "citation": "Indian Contract Act, 1872 §27",
+    "remediation_template": "Remove non-compete or limit to non-solicitation during engagement term only."
+  },
+  {
+    "id": "LR-003",
+    "title": "Termination Without Cause",
+    "applicable_clause_types": ["termination"],
+    "pattern_keywords": ["terminate without cause", "immediate termination", "at will"],
+    "severity": "medium",
+    "explanation": "Immediate termination without cause or notice is non-standard for Indian freelance contracts.",
+    "citation": "Industrial Disputes Act implications",
+    "remediation_template": "Require 30 days written notice for termination without cause."
+  },
+  {
+    "id": "LR-004",
+    "title": "Unilateral Payment Delay",
+    "applicable_clause_types": ["payment"],
+    "pattern_keywords": ["payment within", "net 60", "net 90", "delayed payment"],
+    "severity": "medium",
+    "explanation": "Payment terms exceeding 30-45 days are non-standard and create cash-flow risk.",
+    "citation": "MSMED Act prompt payment provisions",
+    "remediation_template": "Payment terms within 30 days of invoice approval."
+  },
+  {
+    "id": "LR-005",
+    "title": "Unlimited Liability",
+    "applicable_clause_types": ["indemnification"],
+    "pattern_keywords": ["unlimited liability", "hold harmless", "all damages"],
+    "severity": "high",
+    "explanation": "Unlimited liability clauses are non-standard and expose freelancers to disproportionate risk.",
+    "citation": "Indian Contract Act, 1872 §73 (reasonable compensation)",
+    "remediation_template": "Cap liability at total contract value or ₹5 lakhs, whichever is lower."
+  },
+  {
+    "id": "LR-006",
+    "title": "Vague Performance Standards",
+    "applicable_clause_types": ["other"],
+    "pattern_keywords": ["satisfactory performance", "reasonable efforts", "best efforts"],
+    "severity": "low",
+    "explanation": "Vague performance standards allow client to terminate for subjective reasons.",
+    "citation": "Indian Contract Act, 1872 §32 (enforceability of vague terms)",
+    "remediation_template": "Define objective, measurable performance criteria."
+  },
+  {
+    "id": "LR-007",
+    "title": "Auto-Renewal Trap",
+    "applicable_clause_types": ["termination"],
+    "pattern_keywords": ["automatically renew", "auto-renew", "unless terminated"],
+    "severity": "medium",
+    "explanation": "Auto-renewal without explicit notice creates lock-in risk.",
+    "citation": "Consumer Protection Act, 2019 (unfair contract terms)",
+    "remediation_template": "Require 30-day written notice before auto-renewal."
+  },
+  {
+    "id": "LR-008",
+    "title": "Broad Confidentiality Obligations",
+    "applicable_clause_types": ["confidentiality"],
+    "pattern_keywords": ["perpetual confidentiality", "all information", "without limitation"],
+    "severity": "medium",
+    "explanation": "Perpetual or overbroad confidentiality obligations may restrict future work.",
+    "citation": "Indian Contract Act, 1872 §27 (restraint of trade)",
+    "remediation_template": "Limit confidentiality to 2-3 years post-engagement, exclude public information."
   }
 ]
