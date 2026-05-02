@@ -1,0 +1,16 @@
+[
+  {
+    "id": "BM-001",
+    "contract_type": "Freelance Agreement",
+    "clause_type": "IP Assignment",
+    "standard_text": "The Contractor assigns to the Client all intellectual property rights in the specific work product created under this Agreement. The Contractor retains ownership of all pre-existing intellectual property.",
+    "deviation_threshold_high": "Assignment of all pre-existing IP without compensation."
+  },
+  {
+    "id": "BM-002",
+    "contract_type": "Freelance Agreement",
+    "clause_type": "Payment Terms",
+    "standard_text": "Payment shall be made within 30 days of receipt of invoice.",
+    "deviation_threshold_high": "Payment terms exceeding 90 days or conditioning payment on 'client satisfaction' without objective criteria."
+  }
+]

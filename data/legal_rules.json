@@ -1,0 +1,18 @@
+[
+  {
+    "rule_id": "LR-001",
+    "category": "Non-Compete",
+    "rule_statement": "Non-compete clauses extending beyond the term of the contract are generally void under Section 27 of the Indian Contract Act.",
+    "trigger_condition": "If clause restricts contractor from working with competitors after contract terminates.",
+    "severity": "High",
+    "citation": "STAT-001"
+  },
+  {
+    "rule_id": "LR-002",
+    "category": "IP Assignment",
+    "rule_statement": "Assignment of pre-existing intellectual property must be explicitly compensated. Broad assignment without boundaries risks the freelancer's prior toolkits/codebases.",
+    "trigger_condition": "If clause assigns 'all IP' or 'pre-existing IP' rather than 'work product'.",
+    "severity": "Critical",
+    "citation": "STAT-002"
+  }
+]

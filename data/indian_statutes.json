@@ -1,0 +1,18 @@
+[
+  {
+    "id": "STAT-001",
+    "act": "Indian Contract Act, 1872",
+    "section": "Section 27",
+    "title": "Agreement in restraint of trade void",
+    "text": "Every agreement by which any one is restrained from exercising a lawful profession, trade or business of any kind, is to that extent void.",
+    "relevance_for_contracts": "Makes standard non-compete clauses unenforceable in India post-termination."
+  },
+  {
+    "id": "STAT-002",
+    "act": "Copyright Act, 1957",
+    "section": "Section 17",
+    "title": "First owner of copyright",
+    "text": "Subject to the provisions of this Act, the author of a work shall be the first owner of the copyright therein.",
+    "relevance_for_contracts": "Unless explicitly assigned in writing, the freelancer retains copyright."
+  }
+]
