@@ -1,0 +1,819 @@
+[
+  {
+    "id": "LR-001",
+    "title": "Overbroad IP Assignment — Pre-Existing Works",
+    "applicable_clause_types": [
+      "ip_assignment"
+    ],
+    "pattern_keywords": [
+      "all intellectual property",
+      "including pre-existing",
+      "prior works",
+      "works created before"
+    ],
+    "severity": "high",
+    "explanation": "Assigning rights over works created before the engagement is overbroad and unenforceable. Under §17 of the Copyright Act, the author is the first owner; §19 requires specific identification of assigned works. Pre-existing IP not related to the engagement cannot be swept in by a general clause.",
+    "citation": "Indian Copyright Act, 1957, §17; §19",
+    "remediation_template": "Narrow the IP assignment to work product created specifically during and for this engagement only, excluding any pre-existing works, tools, or frameworks owned by the contractor prior to the commencement date."
+  },
+  {
+    "id": "LR-002",
+    "title": "IP Transfer Without Full-Payment Condition",
+    "applicable_clause_types": [
+      "ip_assignment",
+      "payment"
+    ],
+    "pattern_keywords": [
+      "assigns upon signing",
+      "IP transfer upon commencement",
+      "immediately assigns all rights"
+    ],
+    "severity": "high",
+    "explanation": "IP should transfer only upon full payment. A clause that assigns IP upon signing or at project start — before payment is received — leaves the contractor with no leverage to recover unpaid fees and creates unjust enrichment risk.",
+    "citation": "Indian Contract Act, 1872, §25; §73",
+    "remediation_template": "IP rights shall transfer to the client only upon receipt of full and final payment of all undisputed invoices related to the work product."
+  },
+  {
+    "id": "LR-003",
+    "title": "Assignment of Future Works in Perpetuity",
+    "applicable_clause_types": [
+      "ip_assignment"
+    ],
+    "pattern_keywords": [
+      "all future works",
+      "any work created during term",
+      "all works whatsoever"
+    ],
+    "severity": "high",
+    "explanation": "While §18 of the Copyright Act permits assignment of future works, an unlimited assignment of all future works without identifying them or limiting scope is overbroad and likely void for uncertainty under ICA §29.",
+    "citation": "Indian Copyright Act, 1957, §18(1); Indian Contract Act, 1872, §29",
+    "remediation_template": "Limit any future works assignment strictly to deliverables listed in the Statement of Work or project schedule annexed to this agreement."
+  },
+  {
+    "id": "LR-004",
+    "title": "Waiver of Moral Rights",
+    "applicable_clause_types": [
+      "ip_assignment"
+    ],
+    "pattern_keywords": [
+      "waives all moral rights",
+      "no right to attribution",
+      "waives rights under section 57"
+    ],
+    "severity": "medium",
+    "explanation": "Section 57 of the Copyright Act grants authors inalienable moral rights — the right of attribution and the right to object to distortion or mutilation. Any contractual waiver of these rights is void as a matter of Indian law.",
+    "citation": "Indian Copyright Act, 1957, §57",
+    "remediation_template": "Remove any clause purporting to waive the author's moral rights. The client may specify attribution preferences without requiring statutory waiver."
+  },
+  {
+    "id": "LR-005",
+    "title": "Unilateral License Revocation Without Cause",
+    "applicable_clause_types": [
+      "ip_assignment",
+      "licensing"
+    ],
+    "pattern_keywords": [
+      "client may revoke license",
+      "license terminable at will",
+      "revocable at sole discretion"
+    ],
+    "severity": "high",
+    "explanation": "A license revocable at the client's sole discretion without cause creates an illusory contract. Retaining delivered work while revoking the license constitutes unjust enrichment and is contrary to §65 ICA.",
+    "citation": "Indian Contract Act, 1872, §23; §65",
+    "remediation_template": "The license may only be revoked upon material breach by the contractor, subject to a 30-day written cure period. Revocation does not relieve the client of payment obligations for work already delivered."
+  },
+  {
+    "id": "LR-006",
+    "title": "Background IP Contamination",
+    "applicable_clause_types": [
+      "ip_assignment"
+    ],
+    "pattern_keywords": [
+      "all materials used in performance",
+      "including tools and frameworks",
+      "contractor's pre-existing IP incorporated"
+    ],
+    "severity": "high",
+    "explanation": "A clause assigning the contractor's background IP (pre-existing tools, libraries, proprietary frameworks) along with deliverables effectively expropriates the contractor's existing assets without adequate consideration, typically unenforceable.",
+    "citation": "Indian Copyright Act, 1957, §17; §18; Indian Contract Act, 1872, §25",
+    "remediation_template": "Contractor grants client a non-exclusive, perpetual, royalty-free license to use background IP solely to the extent necessary to use the deliverables. Ownership of all background IP remains with the contractor."
+  },
+  {
+    "id": "LR-007",
+    "title": "No License-Back on Rejection or Non-Acceptance",
+    "applicable_clause_types": [
+      "ip_assignment",
+      "acceptance"
+    ],
+    "pattern_keywords": [
+      "IP assigned regardless of acceptance",
+      "rights non-refundable on rejection",
+      "all rights vest even if work rejected"
+    ],
+    "severity": "high",
+    "explanation": "If work is rejected and unpaid, IP assigned in advance must revert to the contractor. Retaining assigned IP without paying for accepted work constitutes unjust enrichment under §65 ICA.",
+    "citation": "Indian Contract Act, 1872, §65; §73",
+    "remediation_template": "If the client does not accept and pay for the deliverables in full, all IP rights shall automatically revert to the contractor without further action required."
+  },
+  {
+    "id": "LR-008",
+    "title": "Perpetual Royalty-Free Sublicensable License Overreach",
+    "applicable_clause_types": [
+      "ip_assignment",
+      "licensing"
+    ],
+    "pattern_keywords": [
+      "perpetual worldwide sublicensable irrevocable royalty-free license",
+      "unlimited sublicensing rights"
+    ],
+    "severity": "medium",
+    "explanation": "A perpetual, worldwide, royalty-free, sublicensable license is functionally equivalent to an outright assignment but without statutory protections for the assignor. Where an assignment is intended, §19 of the Copyright Act requires proper form and identified consideration.",
+    "citation": "Indian Copyright Act, 1957, §18; §19(5)",
+    "remediation_template": "If an assignment is intended, execute a formal assignment per §18-19 with documented consideration. If a license is intended, specify scope, territory, sublicensing rights, and duration precisely."
+  },
+  {
+    "id": "LR-009",
+    "title": "Asymmetric Termination Notice",
+    "applicable_clause_types": [
+      "termination"
+    ],
+    "pattern_keywords": [
+      "client may terminate immediately",
+      "contractor must provide 30 days notice",
+      "unequal notice period"
+    ],
+    "severity": "high",
+    "explanation": "A clause allowing the client to terminate without notice while requiring the contractor to give extended notice creates unreasonable asymmetry. Indian courts may treat such provisions as unconscionable and refuse enforcement where no reasonable justification exists.",
+    "citation": "Indian Contract Act, 1872, §10; §23",
+    "remediation_template": "Either party may terminate this agreement upon 30 days' written notice. Notice periods shall be identical for both parties."
+  },
+  {
+    "id": "LR-010",
+    "title": "No Cure Period Before Termination for Breach",
+    "applicable_clause_types": [
+      "termination"
+    ],
+    "pattern_keywords": [
+      "immediate termination upon breach",
+      "terminates automatically on default",
+      "no right to cure"
+    ],
+    "severity": "high",
+    "explanation": "Denying the breaching party an opportunity to remedy minor breaches before termination is commercially unreasonable. Courts view automatic-termination-for-any-breach clauses unfavorably, particularly where the breach is not material.",
+    "citation": "Indian Contract Act, 1872, §39; §53",
+    "remediation_template": "In the event of material breach, the non-breaching party shall give written notice specifying the breach in detail. The breaching party has 15 business days to cure. Termination may proceed only if the breach remains uncured after the cure period."
+  },
+  {
+    "id": "LR-011",
+    "title": "Termination for Convenience Without Kill Fee",
+    "applicable_clause_types": [
+      "termination",
+      "payment"
+    ],
+    "pattern_keywords": [
+      "terminate for convenience",
+      "no further payment on termination",
+      "client may terminate any time without liability"
+    ],
+    "severity": "high",
+    "explanation": "While termination-for-convenience clauses are valid, denying the contractor compensation for work completed or in progress violates the right to damages under §73 ICA. The terminating party must compensate for work done and the contractor's reasonable reliance losses.",
+    "citation": "Indian Contract Act, 1872, §73",
+    "remediation_template": "Upon termination for convenience, client shall pay for all work completed and accepted up to the termination date, plus 20% of the remaining unpaid contract value as a kill fee, within 15 business days of termination."
+  },
+  {
+    "id": "LR-012",
+    "title": "Termination Trigger at Client's Sole Discretion",
+    "applicable_clause_types": [
+      "termination"
+    ],
+    "pattern_keywords": [
+      "client's sole discretion",
+      "if client is unsatisfied",
+      "client may terminate at will"
+    ],
+    "severity": "high",
+    "explanation": "Termination rights defined solely by the client's subjective judgment are void for uncertainty under §29 ICA. Termination rights must be tied to objective, identifiable events or defined material breaches.",
+    "citation": "Indian Contract Act, 1872, §29",
+    "remediation_template": "Termination for cause shall only be triggered by: (a) material breach as defined in Schedule X; (b) insolvency proceedings; (c) criminal conviction; or (d) abandonment of project for more than 14 consecutive days."
+  },
+  {
+    "id": "LR-013",
+    "title": "No Payment for Work Done Before Termination",
+    "applicable_clause_types": [
+      "termination",
+      "payment"
+    ],
+    "pattern_keywords": [
+      "no payment on termination",
+      "all amounts waived on termination",
+      "work forfeited if agreement terminated"
+    ],
+    "severity": "high",
+    "explanation": "A clause extinguishing payment obligations for work already performed is contrary to §65 (restitution) and §73 (compensation for breach) of the ICA. Courts routinely award quantum meruit for work done in good faith before termination.",
+    "citation": "Indian Contract Act, 1872, §65; §73",
+    "remediation_template": "Termination shall not relieve the client of the obligation to pay for all work performed in good faith prior to the effective date of termination. All outstanding invoices become due on the termination date."
+  },
+  {
+    "id": "LR-014",
+    "title": "Excessive Contractor Notice Period",
+    "applicable_clause_types": [
+      "termination"
+    ],
+    "pattern_keywords": [
+      "contractor must give 90 days notice",
+      "6 months notice from contractor",
+      "notice period exceeding 45 days for freelancer"
+    ],
+    "severity": "medium",
+    "explanation": "Requiring a contractor to give disproportionately long notice (90+ days) while the client faces no equivalent obligation creates an unreasonable lock-in. Market standard for freelance engagements is 14–30 days notice from either party.",
+    "citation": "Indian Contract Act, 1872, §10; §23",
+    "remediation_template": "The contractor may terminate with 30 days' written notice, identical to the notice period required from the client."
+  },
+  {
+    "id": "LR-015",
+    "title": "Continued Work Obligation During Notice Without Explicit Pay",
+    "applicable_clause_types": [
+      "termination"
+    ],
+    "pattern_keywords": [
+      "services continue during notice period",
+      "no additional pay during handover",
+      "work until transition complete"
+    ],
+    "severity": "medium",
+    "explanation": "Requiring the contractor to continue working during the notice period without explicitly stating that such work will be compensated at the contract rate creates a hidden unpaid-work obligation.",
+    "citation": "Indian Contract Act, 1872, §2(d)",
+    "remediation_template": "All services rendered during the notice period shall be compensated at the rates specified in Schedule A. Time-and-materials billing shall continue uninterrupted through the termination effective date."
+  },
+  {
+    "id": "LR-016",
+    "title": "Asymmetric Force Majeure — Client Only",
+    "applicable_clause_types": [
+      "termination",
+      "force_majeure"
+    ],
+    "pattern_keywords": [
+      "only client may invoke force majeure",
+      "force majeure applies to client only",
+      "contractor shall perform notwithstanding force majeure"
+    ],
+    "severity": "high",
+    "explanation": "Force majeure relief under §56 ICA is available to either party affected by supervening impossibility. A clause allowing only the client to invoke force majeure while holding the contractor to strict performance is void as contrary to public policy.",
+    "citation": "Indian Contract Act, 1872, §56",
+    "remediation_template": "Force majeure provisions apply equally to both parties. Either party may invoke force majeure upon written notice within 5 business days of the triggering event."
+  },
+  {
+    "id": "LR-017",
+    "title": "Subjective Milestone Acceptance Criterion",
+    "applicable_clause_types": [
+      "payment",
+      "acceptance"
+    ],
+    "pattern_keywords": [
+      "upon client satisfaction",
+      "client's sole approval required",
+      "payment subject to client's judgment"
+    ],
+    "severity": "high",
+    "explanation": "Payment conditions tied to client 'satisfaction' without objective criteria are void for uncertainty under §29 ICA. Without measurable standards, the client can perpetually withhold acceptance and payment.",
+    "citation": "Indian Contract Act, 1872, §29",
+    "remediation_template": "Acceptance occurs when the deliverable meets the specifications in Schedule X. Client must provide written approval or a specific written defect list within 10 business days of delivery. Silence constitutes deemed acceptance."
+  },
+  {
+    "id": "LR-018",
+    "title": "Disproportionate Contractor Delay Penalty",
+    "applicable_clause_types": [
+      "payment"
+    ],
+    "pattern_keywords": [
+      "penalty of 5% per day",
+      "daily penalty until completion",
+      "liquidated damages exceeding contract value"
+    ],
+    "severity": "high",
+    "explanation": "Under §74 ICA, a party is entitled to reasonable compensation not exceeding the stipulated penalty amount. Courts will not enforce penalties unconscionably disproportionate to actual loss. Penalty clauses must be a genuine pre-estimate of likely damage.",
+    "citation": "Indian Contract Act, 1872, §74",
+    "remediation_template": "Liquidated damages for contractor-attributable delay shall not exceed 0.5% of the monthly contract value per week of delay, capped at 5% of total contract value."
+  },
+  {
+    "id": "LR-019",
+    "title": "Unlimited Payment Holdback",
+    "applicable_clause_types": [
+      "payment"
+    ],
+    "pattern_keywords": [
+      "client may withhold payment",
+      "until all defects corrected",
+      "client determines amount due"
+    ],
+    "severity": "high",
+    "explanation": "An unlimited right to withhold any payment at unilateral discretion is commercially unreasonable. Retaining amounts vastly exceeding the remediation cost constitutes a penalty under §74 ICA.",
+    "citation": "Indian Contract Act, 1872, §55; §73; §74",
+    "remediation_template": "Client may withhold no more than 10% of the invoiced amount pending resolution of specific documented defects. Undisputed amounts must be paid by the invoice due date."
+  },
+  {
+    "id": "LR-020",
+    "title": "No Interest on Late Client Payments",
+    "applicable_clause_types": [
+      "payment"
+    ],
+    "pattern_keywords": [
+      "no interest on late payment",
+      "payment at client's convenience",
+      "payment within 90 days"
+    ],
+    "severity": "medium",
+    "explanation": "Contracts imposing strict penalties on contractor delay but providing no remedy for client payment delay create asymmetric risk. Interest on delayed payments is standard market protection for service providers.",
+    "citation": "Indian Contract Act, 1872, §73; MSMED Act, 2006 §16 (where applicable)",
+    "remediation_template": "Invoices unpaid beyond 30 days shall accrue interest at 18% per annum (1.5% per month) from the due date until payment is received in full."
+  },
+  {
+    "id": "LR-021",
+    "title": "Penalty Clause Exceeding Actual Loss",
+    "applicable_clause_types": [
+      "payment"
+    ],
+    "pattern_keywords": [
+      "return double the advance",
+      "damages equal full contract value",
+      "forfeiture of all amounts paid"
+    ],
+    "severity": "high",
+    "explanation": "A penalty requiring the contractor to pay damages equal to or greater than the total contract value for any breach is unenforceable as a penalty rather than a genuine pre-estimate of loss. Under §74 ICA courts award only reasonable compensation.",
+    "citation": "Indian Contract Act, 1872, §74",
+    "remediation_template": "Total liability of either party shall not exceed the total fees paid or payable in the three months preceding the event giving rise to the claim."
+  },
+  {
+    "id": "LR-022",
+    "title": "Unilateral Set-Off Without Notice",
+    "applicable_clause_types": [
+      "payment"
+    ],
+    "pattern_keywords": [
+      "client may deduct",
+      "set-off any amounts from invoice",
+      "client may withhold claimed damages"
+    ],
+    "severity": "medium",
+    "explanation": "Unilateral deduction from invoiced amounts without notice denies the contractor an opportunity to dispute the claim. Market standard requires notification and a dispute window before any deduction.",
+    "citation": "Indian Contract Act, 1872, §64; Code of Civil Procedure, 1908, Order VIII Rule 6",
+    "remediation_template": "Any set-off or deduction against an invoice must be preceded by written notice specifying the claim amount and basis. Contractor has 15 business days to dispute. Undisputed invoice amounts must be paid by the due date."
+  },
+  {
+    "id": "LR-023",
+    "title": "Overbroad Confidentiality Definition",
+    "applicable_clause_types": [
+      "confidentiality"
+    ],
+    "pattern_keywords": [
+      "all information disclosed",
+      "anything contractor learns",
+      "including publicly available information"
+    ],
+    "severity": "high",
+    "explanation": "A confidentiality definition capturing all information without exception — including publicly known facts — is overbroad and void for uncertainty. It renders confidentiality meaningless as a legal protection and may be unenforceable in its entirety.",
+    "citation": "Indian Contract Act, 1872, §23; §29",
+    "remediation_template": "Confidential Information means non-public, proprietary information specifically marked confidential, or that a reasonable person would understand to be confidential given the context of disclosure."
+  },
+  {
+    "id": "LR-024",
+    "title": "No Standard Exceptions to Confidentiality",
+    "applicable_clause_types": [
+      "confidentiality"
+    ],
+    "pattern_keywords": [
+      "no exceptions to confidentiality",
+      "all information confidential without exception",
+      "including independently developed information"
+    ],
+    "severity": "high",
+    "explanation": "A confidentiality clause without carve-outs for publicly known information, independently developed information, or legally compelled disclosures is unreasonably broad and will likely not be enforced by Indian courts in its entirety.",
+    "citation": "Indian Contract Act, 1872, §23",
+    "remediation_template": "Exceptions include: (a) information already public at disclosure; (b) independently developed without use of disclosed information; (c) received from a third party without restriction; and (d) required to be disclosed by law or court order, with prior notice to disclosing party."
+  },
+  {
+    "id": "LR-025",
+    "title": "Perpetual Post-Term Confidentiality on General Business Information",
+    "applicable_clause_types": [
+      "confidentiality"
+    ],
+    "pattern_keywords": [
+      "confidentiality survives indefinitely",
+      "no time limit on confidentiality obligation",
+      "perpetual confidentiality"
+    ],
+    "severity": "medium",
+    "explanation": "Applying indefinite confidentiality to general business information may resemble an unreasonable restraint on future activity. Market standard is 2–5 years post-term, with perpetual obligations reserved for genuine trade secrets.",
+    "citation": "Indian Contract Act, 1872, §28",
+    "remediation_template": "Confidentiality obligations survive termination for 3 years. Obligations regarding trade secrets (as specifically identified in Schedule X) survive until such information enters the public domain through no fault of the contractor."
+  },
+  {
+    "id": "LR-026",
+    "title": "Unilateral Breach Determination by Client",
+    "applicable_clause_types": [
+      "confidentiality"
+    ],
+    "pattern_keywords": [
+      "client's determination of breach is final",
+      "client may determine if breach occurred",
+      "contractor accepts client's assessment"
+    ],
+    "severity": "high",
+    "explanation": "A clause allowing the client to finally determine whether a confidentiality breach occurred violates natural justice principles. All breach determinations must be subject to independent adjudication.",
+    "citation": "Indian Contract Act, 1872, §28; Constitution of India, Article 14",
+    "remediation_template": "Any alleged breach of confidentiality shall be subject to the dispute resolution mechanism in Clause X. Neither party's unilateral assessment of breach shall be binding absent an independent adjudicator's or court's determination."
+  },
+  {
+    "id": "LR-027",
+    "title": "One-Sided Confidentiality — Contractor Bound, Client Free",
+    "applicable_clause_types": [
+      "confidentiality"
+    ],
+    "pattern_keywords": [
+      "only contractor bound by confidentiality",
+      "client has no confidentiality obligation",
+      "client may disclose contractor information"
+    ],
+    "severity": "medium",
+    "explanation": "A confidentiality clause binding only the contractor while allowing the client to freely disclose the contractor's proprietary methods, pricing, and processes is commercially unreasonable.",
+    "citation": "Indian Contract Act, 1872, §10; §23",
+    "remediation_template": "Confidentiality obligations apply mutually to both parties. Each party shall protect the other's confidential information with at least the same degree of care as their own, and no less than reasonable care."
+  },
+  {
+    "id": "LR-028",
+    "title": "Post-Term Non-Compete Clause",
+    "applicable_clause_types": [
+      "non_compete"
+    ],
+    "pattern_keywords": [
+      "shall not compete after termination",
+      "non-compete for 1 year post-engagement",
+      "restricted from competing after contract ends"
+    ],
+    "severity": "high",
+    "explanation": "Non-compete clauses operating after the term of a freelance or employment contract are void under §27 of the Indian Contract Act. Indian courts have consistently held post-engagement non-competes unenforceable. This is a fundamental difference from many other jurisdictions.",
+    "citation": "Indian Contract Act, 1872, §27",
+    "remediation_template": "Remove post-term non-compete provisions entirely. They are void under §27 ICA. Legitimate business interests may be protected through narrowly drafted confidentiality and non-solicitation clauses instead."
+  },
+  {
+    "id": "LR-029",
+    "title": "Global or Industry-Wide Non-Compete Scope",
+    "applicable_clause_types": [
+      "non_compete"
+    ],
+    "pattern_keywords": [
+      "global non-compete",
+      "entire industry restricted",
+      "any competing business anywhere in the world"
+    ],
+    "severity": "high",
+    "explanation": "Even non-competes operating during the engagement must be reasonable and proportionate to legitimate business interests. Global scope or entire-industry restrictions are categorically unreasonable under Indian law.",
+    "citation": "Indian Contract Act, 1872, §27; Niranjan Shankar Golikari v. Century Spinning & Mfg. Co. Ltd., AIR 1967 SC 1098",
+    "remediation_template": "Any restriction during the engagement period shall be limited to activities directly competitive with the client's specific, named product lines and within a defined geographic territory, proportionate to the legitimate interest protected."
+  },
+  {
+    "id": "LR-030",
+    "title": "Non-Solicitation Without Adequate Consideration",
+    "applicable_clause_types": [
+      "non_compete",
+      "non_solicit"
+    ],
+    "pattern_keywords": [
+      "shall not solicit client's customers post-term",
+      "non-solicit without additional payment",
+      "post-term non-solicitation without compensation"
+    ],
+    "severity": "medium",
+    "explanation": "Post-term non-solicitation clauses, while generally more enforceable than non-competes in India, still require adequate consideration. A non-solicit without additional consideration beyond the base contract price may be challengeable.",
+    "citation": "Indian Contract Act, 1872, §25",
+    "remediation_template": "Any post-term non-solicitation obligations (if agreed) shall be limited to 12 months, narrowly scoped to clients specifically introduced to the contractor by the client, and supported by documented additional consideration."
+  },
+  {
+    "id": "LR-031",
+    "title": "Overbroad Non-Solicitation Covering Entire Sector",
+    "applicable_clause_types": [
+      "non_solicit"
+    ],
+    "pattern_keywords": [
+      "shall not work with any company in the same sector",
+      "indirect competition prohibited",
+      "sector-wide non-solicit"
+    ],
+    "severity": "high",
+    "explanation": "A non-solicitation clause preventing the contractor from working with any company in the same industry sector as the client functions as an industry-wide non-compete and is void under §27 ICA.",
+    "citation": "Indian Contract Act, 1872, §27",
+    "remediation_template": "Non-solicitation applies only to specific clients and employees with whom the contractor had direct, documented contact during the engagement period, for no more than 12 months post-termination."
+  },
+  {
+    "id": "LR-032",
+    "title": "Unilateral Client Expansion of Restrictive Covenant Scope",
+    "applicable_clause_types": [
+      "non_compete"
+    ],
+    "pattern_keywords": [
+      "client may add restricted companies",
+      "client may extend restriction period",
+      "client determines scope of non-compete"
+    ],
+    "severity": "high",
+    "explanation": "A restrictive covenant whose scope can be determined unilaterally by the client post-signing is void for uncertainty under §29 ICA. All restrictions must be fully specified in writing at signing.",
+    "citation": "Indian Contract Act, 1872, §29; §23",
+    "remediation_template": "Any restriction on the contractor's future activities must be fully and specifically defined in this agreement at the time of signing. The client has no right to unilaterally expand the scope or duration of any restriction."
+  },
+  {
+    "id": "LR-033",
+    "title": "Uncapped Contractor Indemnification",
+    "applicable_clause_types": [
+      "indemnification"
+    ],
+    "pattern_keywords": [
+      "indemnify for all losses without limit",
+      "unlimited indemnification",
+      "including all consequential and indirect losses"
+    ],
+    "severity": "high",
+    "explanation": "An unlimited indemnification obligation is commercially unreasonable and creates effectively unlimited liability. Indian courts apply §74's principle that compensation must be reasonable and proportionate to actual loss.",
+    "citation": "Indian Contract Act, 1872, §23; §74",
+    "remediation_template": "Total indemnification obligation of either party shall not exceed the total fees paid under this agreement in the 12 months preceding the indemnification event. Indemnification shall not cover indirect, consequential, incidental, or punitive damages."
+  },
+  {
+    "id": "LR-034",
+    "title": "One-Sided Indemnification — Contractor Only",
+    "applicable_clause_types": [
+      "indemnification"
+    ],
+    "pattern_keywords": [
+      "only contractor indemnifies",
+      "client has no indemnification obligation",
+      "one-way indemnity provision"
+    ],
+    "severity": "high",
+    "explanation": "A contract requiring the contractor to indemnify the client with no reciprocal obligation is commercially unreasonable. Where the client's acts, negligence, or instructions cause loss, the client should bear corresponding indemnification.",
+    "citation": "Indian Contract Act, 1872, §10; §23",
+    "remediation_template": "Each party shall indemnify the other from claims arising from: (a) that party's breach of this agreement; or (b) that party's negligence or willful misconduct. Indemnification obligations shall be mutual and capped equally."
+  },
+  {
+    "id": "LR-035",
+    "title": "Contractor Bears All Third-Party IP Infringement Claims",
+    "applicable_clause_types": [
+      "indemnification"
+    ],
+    "pattern_keywords": [
+      "contractor indemnifies all IP claims",
+      "including claims arising from client instructions",
+      "contractor bears all third-party IP liability"
+    ],
+    "severity": "high",
+    "explanation": "Where the client provides specifications, trademarks, or creative direction that causes IP infringement, liability should rest with the client. A blanket contractor indemnity for all IP claims ignores the client's contributory role.",
+    "citation": "Indian Contract Act, 1872, §73",
+    "remediation_template": "Contractor indemnifies client against third-party IP claims arising from contractor-originated content. Client indemnifies contractor against claims arising from client-provided materials, specifications, or brand assets."
+  },
+  {
+    "id": "LR-036",
+    "title": "Liability Cap Set Below Contract Value",
+    "applicable_clause_types": [
+      "indemnification",
+      "liability"
+    ],
+    "pattern_keywords": [
+      "liability limited to Rs. 1000",
+      "cap below fees paid",
+      "nominal liability cap"
+    ],
+    "severity": "high",
+    "explanation": "A liability cap set nominally below the contract value is commercially unreasonable and may be void as against public policy. The cap should be proportionate to the contract value and the risks undertaken.",
+    "citation": "Indian Contract Act, 1872, §23; §73",
+    "remediation_template": "Each party's total aggregate liability shall not exceed the total fees paid or payable in the 12 months preceding the claim. This cap does not apply to claims for gross negligence, willful misconduct, or breach of confidentiality."
+  },
+  {
+    "id": "LR-037",
+    "title": "Exclusion of Liability for Gross Negligence or Willful Misconduct",
+    "applicable_clause_types": [
+      "indemnification",
+      "liability"
+    ],
+    "pattern_keywords": [
+      "liability excluded for all acts",
+      "no claim regardless of negligence",
+      "waives all claims including gross negligence"
+    ],
+    "severity": "high",
+    "explanation": "While parties may limit liability for ordinary negligence, excluding liability for gross negligence or willful misconduct is contrary to public policy under §23 ICA and will not be enforced by Indian courts.",
+    "citation": "Indian Contract Act, 1872, §23",
+    "remediation_template": "Limitations of liability shall not apply to claims arising from: (a) gross negligence or willful misconduct; (b) fraud or fraudulent misrepresentation; (c) death or personal injury; or (d) breach of confidentiality obligations."
+  },
+  {
+    "id": "LR-038",
+    "title": "Foreign Governing Law for Domestic Indian Contract",
+    "applicable_clause_types": [
+      "dispute_resolution",
+      "governing_law"
+    ],
+    "pattern_keywords": [
+      "governed by laws of Delaware",
+      "English law applies",
+      "governed by laws of Singapore"
+    ],
+    "severity": "high",
+    "explanation": "For contracts primarily performed in India between Indian parties, foreign governing law clauses may be void under §28 ICA. An Indian freelancer cannot reasonably litigate under foreign law in foreign courts.",
+    "citation": "Indian Contract Act, 1872, §28; Code of Civil Procedure, 1908",
+    "remediation_template": "This agreement shall be governed by and construed in accordance with the laws of India. All disputes shall be subject to the jurisdiction of the courts at [city where the contractor is located]."
+  },
+  {
+    "id": "LR-039",
+    "title": "Mandatory Arbitration at Foreign Seat",
+    "applicable_clause_types": [
+      "dispute_resolution"
+    ],
+    "pattern_keywords": [
+      "arbitration in Singapore",
+      "ICC arbitration",
+      "London seat arbitration",
+      "SIAC rules"
+    ],
+    "severity": "high",
+    "explanation": "Mandatory international arbitration (ICC, SIAC, LCIA) is disproportionately expensive for individual contractors. Costs typically exceed the contract value for small engagements, effectively denying the contractor access to justice.",
+    "citation": "Arbitration and Conciliation Act, 1996, §2(2)",
+    "remediation_template": "Disputes shall be resolved by arbitration under the Arbitration and Conciliation Act, 1996, with a domestic seat at [city of contractor's registered address]. A sole arbitrator shall be appointed by mutual agreement, failing which per the Act."
+  },
+  {
+    "id": "LR-040",
+    "title": "Waiver of Statutory Rights by Contract",
+    "applicable_clause_types": [
+      "dispute_resolution"
+    ],
+    "pattern_keywords": [
+      "waives all statutory rights",
+      "no recourse to consumer forum",
+      "waives rights under Indian law"
+    ],
+    "severity": "high",
+    "explanation": "A contractor cannot be contractually made to waive statutory rights — including the right to approach consumer forums, labor tribunals, or statutory authorities. Such waivers are contrary to public policy and void under §23 ICA.",
+    "citation": "Indian Contract Act, 1872, §23; Consumer Protection Act, 2019",
+    "remediation_template": "Nothing in this agreement limits either party's right to approach courts or statutory tribunals as permitted by applicable Indian law. Arbitration applies only to commercial disputes arising under this agreement."
+  },
+  {
+    "id": "LR-041",
+    "title": "Unilateral Venue Selection by Client",
+    "applicable_clause_types": [
+      "dispute_resolution"
+    ],
+    "pattern_keywords": [
+      "courts of client's city shall have exclusive jurisdiction",
+      "venue at client's sole discretion",
+      "client selects court of jurisdiction"
+    ],
+    "severity": "medium",
+    "explanation": "A clause allowing the client alone to determine the venue for legal proceedings forces the contractor to litigate in inconvenient and expensive jurisdictions. Indian courts consider the convenience of all parties when determining appropriate jurisdiction.",
+    "citation": "Code of Civil Procedure, 1908, §20",
+    "remediation_template": "Disputes shall be submitted to courts at the location where the majority of services are performed, or where the contractor's registered address is situated, whichever the initiating party chooses."
+  },
+  {
+    "id": "LR-042",
+    "title": "Force Majeure Only Available to Client",
+    "applicable_clause_types": [
+      "force_majeure"
+    ],
+    "pattern_keywords": [
+      "only client may declare force majeure",
+      "contractor performs notwithstanding force majeure",
+      "force majeure relief for client only"
+    ],
+    "severity": "high",
+    "explanation": "Force majeure relief under §56 ICA is available to either party affected by supervening impossibility. A clause offering force majeure protection only to the client while holding the contractor to strict obligations is void as contrary to public policy.",
+    "citation": "Indian Contract Act, 1872, §56",
+    "remediation_template": "Force majeure provisions apply symmetrically to both parties. Either party may invoke force majeure with written notice within 5 business days of the triggering event."
+  },
+  {
+    "id": "LR-043",
+    "title": "Vague Force Majeure Trigger Definition",
+    "applicable_clause_types": [
+      "force_majeure"
+    ],
+    "pattern_keywords": [
+      "any unforeseen event",
+      "events beyond control",
+      "force majeure at client's discretion"
+    ],
+    "severity": "medium",
+    "explanation": "An undefined force majeure clause can be invoked to avoid payment obligations for any inconvenience. Trigger events must be specifically enumerated to prevent abuse and to ensure both parties can plan around known risks.",
+    "citation": "Indian Contract Act, 1872, §29; §56",
+    "remediation_template": "Force majeure events are limited to: natural disasters, acts of government authority, war, terrorism, pandemic declared by the WHO or Government of India, and prolonged utility outages exceeding 72 continuous hours."
+  },
+  {
+    "id": "LR-044",
+    "title": "Force Majeure Without Notice Obligation",
+    "applicable_clause_types": [
+      "force_majeure"
+    ],
+    "pattern_keywords": [
+      "force majeure applies automatically",
+      "no notification required for force majeure",
+      "force majeure without prior notice"
+    ],
+    "severity": "medium",
+    "explanation": "Force majeure without a prompt-notice obligation allows a party to retrospectively invoke it to avoid obligations without giving the other party an opportunity to mitigate or seek alternatives.",
+    "citation": "Indian Contract Act, 1872, §56",
+    "remediation_template": "A party invoking force majeure must provide written notice within 48 hours of the triggering event, identifying the nature of the event and its expected duration. Failure to give timely notice forfeits force majeure protection for the period of non-notification."
+  },
+  {
+    "id": "LR-045",
+    "title": "Client Satisfaction as Acceptance Criterion",
+    "applicable_clause_types": [
+      "acceptance",
+      "payment"
+    ],
+    "pattern_keywords": [
+      "work accepted upon client satisfaction",
+      "client has sole discretion over acceptance",
+      "must be perfect before payment"
+    ],
+    "severity": "high",
+    "explanation": "Acceptance criteria defined solely by subjective client satisfaction are void for uncertainty under §29 ICA. Without objective standards, the client can perpetually withhold acceptance and payment, leaving the contractor without remedy.",
+    "citation": "Indian Contract Act, 1872, §29",
+    "remediation_template": "Work shall be deemed accepted when it materially conforms to the specifications in Schedule A. Client must provide written approval or a specific written defect list within 10 business days of delivery. Non-response constitutes deemed acceptance."
+  },
+  {
+    "id": "LR-046",
+    "title": "Unlimited Revision Obligation",
+    "applicable_clause_types": [
+      "acceptance",
+      "payment"
+    ],
+    "pattern_keywords": [
+      "unlimited revisions until client satisfied",
+      "revisions at no additional cost",
+      "revise until perfect"
+    ],
+    "severity": "high",
+    "explanation": "An obligation to perform unlimited revisions creates an unquantifiable and potentially infinite service obligation disproportionate to the consideration. Revisions beyond an agreed number should constitute change orders.",
+    "citation": "Indian Contract Act, 1872, §2(d); §23",
+    "remediation_template": "Contract price includes 2 rounds of consolidated revisions. Additional revisions constitute out-of-scope work, billable at the hourly rate in Schedule A. All revision requests must be submitted in writing referencing specific specification requirements."
+  },
+  {
+    "id": "LR-047",
+    "title": "Deliverable Scope Defined by Client Post-Signing",
+    "applicable_clause_types": [
+      "acceptance",
+      "payment"
+    ],
+    "pattern_keywords": [
+      "as specified by client from time to time",
+      "deliverables to be determined by client",
+      "scope at client's discretion"
+    ],
+    "severity": "high",
+    "explanation": "A contract whose deliverable scope is left to the client's future determination is void for uncertainty under §29 ICA. All deliverables must be specified with sufficient precision to allow objective acceptance testing at the time of signing.",
+    "citation": "Indian Contract Act, 1872, §29",
+    "remediation_template": "All deliverables are specified in Schedule A (Statement of Work). Any expansion of scope requires a written change order signed by both parties, specifying additional deliverables and corresponding additional fees before work commences."
+  },
+  {
+    "id": "LR-048",
+    "title": "Silent Auto-Renewal Without Active Notification",
+    "applicable_clause_types": [
+      "auto_renewal"
+    ],
+    "pattern_keywords": [
+      "automatically renews unless cancelled",
+      "renews for additional term without notice",
+      "automatic renewal unless party objects"
+    ],
+    "severity": "medium",
+    "explanation": "Auto-renewal without active notification obligations may constitute an unfair trade practice, particularly where the renewal period is long or the cancellation window is short. The Consumer Protection Act identifies inadequate renewal notification as potentially unfair.",
+    "citation": "Consumer Protection Act, 2019, §2(47); Indian Contract Act, 1872, §10",
+    "remediation_template": "This agreement shall not automatically renew. At least 60 days before expiry, either party may propose renewal on mutually agreed terms. Renewal requires express written agreement signed by both parties."
+  },
+  {
+    "id": "LR-049",
+    "title": "Unreasonably Short Cancellation Window Before Auto-Renewal",
+    "applicable_clause_types": [
+      "auto_renewal"
+    ],
+    "pattern_keywords": [
+      "must cancel within 7 days",
+      "cancellation 24 hours before renewal",
+      "3-day cancellation window"
+    ],
+    "severity": "high",
+    "explanation": "A cancellation window of fewer than 30 days before auto-renewal effectively traps a party in an unwanted renewal. This may constitute an unfair contract term under §2(47) of the Consumer Protection Act.",
+    "citation": "Consumer Protection Act, 2019, §2(47)",
+    "remediation_template": "A party wishing to opt out of renewal must provide written notice at least 60 days before the contract expiry date. Cancellation windows of fewer than 30 days are unenforceable."
+  },
+  {
+    "id": "LR-050",
+    "title": "Retroactive Price Increase on Auto-Renewal",
+    "applicable_clause_types": [
+      "auto_renewal",
+      "payment"
+    ],
+    "pattern_keywords": [
+      "renewal at current market rate",
+      "price increase upon renewal",
+      "client may adjust rate without notice on renewal"
+    ],
+    "severity": "medium",
+    "explanation": "An automatic price increase upon renewal without prior notice denies the other party the ability to make an informed renewal decision. Price terms for any renewal must be communicated with adequate advance notice.",
+    "citation": "Indian Contract Act, 1872, §10; §23",
+    "remediation_template": "Fees for any renewal term must be communicated in writing at least 45 days before the renewal date. If renewal fees are not expressly accepted in writing by both parties, the contract expires at the end of the current term without renewal."
+  }
+]

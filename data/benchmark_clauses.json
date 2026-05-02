@@ -1,0 +1,841 @@
+[
+  {
+    "id": "BC-001",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "ip_assignment",
+    "text": "Upon receipt of full payment for each deliverable, the contractor assigns to the client all right, title, and interest in the work product created specifically for this engagement, excluding any pre-existing works, tools, or frameworks owned by the contractor prior to the commencement date.",
+    "numeric_features": {
+      "payment_trigger": true,
+      "pre_existing_excluded": true,
+      "scope": "work_product_only"
+    },
+    "source_descriptor": "synthesized from public Indian freelance contract templates and legal guidance"
+  },
+  {
+    "id": "BC-002",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "ip_assignment",
+    "text": "The contractor retains all right, title, and interest in any tools, libraries, frameworks, or methodologies developed independently of this engagement (Background IP). The contractor grants the client a non-exclusive, perpetual, royalty-free license to use the Background IP solely to the extent necessary to use the deliverables.",
+    "numeric_features": {
+      "license_scope": "non_exclusive",
+      "duration": "perpetual",
+      "use_restriction": "deliverables_only"
+    },
+    "source_descriptor": "synthesized from standard Indian software development contracts"
+  },
+  {
+    "id": "BC-003",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "ip_assignment",
+    "text": "Prior to commencement, the contractor shall disclose in Schedule B any open-source components to be incorporated into the deliverables, including the applicable license terms. The client approves such use by signing this agreement.",
+    "numeric_features": {
+      "disclosure_required": true,
+      "client_approval_required": true
+    },
+    "source_descriptor": "synthesized from standard software development agreements under Indian law"
+  },
+  {
+    "id": "BC-004",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "ip_assignment",
+    "text": "If the client terminates this agreement before full payment is received, all work product developed to date shall revert to the contractor. The contractor shall deliver copies of all completed work to the client, and the client's license to use such work product shall be limited to personal, non-commercial review.",
+    "numeric_features": {
+      "ip_reversion_on_non_payment": true
+    },
+    "source_descriptor": "synthesized from market practice for Indian freelance agreements"
+  },
+  {
+    "id": "BC-005",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "termination_notice",
+    "text": "Either party may terminate this agreement with thirty (30) days' written notice to the other party. The notice period shall be identical for both parties.",
+    "numeric_features": {
+      "notice_days_contractor": 30,
+      "notice_days_client": 30,
+      "is_symmetric": true
+    },
+    "source_descriptor": "synthesized from public Indian freelance contract templates"
+  },
+  {
+    "id": "BC-006",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "termination_notice",
+    "text": "In the event of a material breach, the non-breaching party shall provide written notice specifying the breach in reasonable detail. The breaching party shall have fifteen (15) business days from receipt of such notice to cure the breach. Termination may proceed only if the breach remains uncured at the end of the cure period.",
+    "numeric_features": {
+      "cure_period_days": 15,
+      "notice_required": true,
+      "material_breach_required": true
+    },
+    "source_descriptor": "synthesized from standard Indian commercial services agreements"
+  },
+  {
+    "id": "BC-007",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "termination_notice",
+    "text": "If the client terminates this agreement for convenience (i.e., without cause), the client shall pay the contractor for all work completed and accepted up to the termination date, plus twenty percent (20%) of the remaining unpaid contract value as a kill fee, within fifteen (15) business days of the termination date.",
+    "numeric_features": {
+      "kill_fee_percentage": 20,
+      "payment_period_days": 15,
+      "applies_to": "termination_for_convenience"
+    },
+    "source_descriptor": "synthesized from market-standard Indian freelance and creative services agreements"
+  },
+  {
+    "id": "BC-008",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "termination_notice",
+    "text": "Either party may terminate this agreement immediately upon written notice if the other party: (a) commits fraud or material dishonesty; (b) misappropriates confidential information or intellectual property; (c) fails to make undisputed payment for more than sixty (60) days after the due date; or (d) becomes insolvent or enters liquidation proceedings.",
+    "numeric_features": {
+      "notice_period_immediate": true,
+      "non_payment_trigger_days": 60
+    },
+    "source_descriptor": "synthesized from standard Indian professional services agreements"
+  },
+  {
+    "id": "BC-009",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "payment",
+    "text": "The client shall pay fifty percent (50%) of the total project fee upon signing this agreement and the remaining fifty percent (50%) upon delivery and acceptance of the final deliverable.",
+    "numeric_features": {
+      "advance_percentage": 50,
+      "balance_percentage": 50,
+      "balance_trigger": "final_delivery_and_acceptance"
+    },
+    "source_descriptor": "synthesized from common Indian freelance payment practice"
+  },
+  {
+    "id": "BC-010",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "payment",
+    "text": "Payment shall be made in three (3) milestone installments as specified in Schedule A: (a) 30% upon signing; (b) 40% upon delivery of the intermediate milestone; and (c) 30% upon final delivery and acceptance.",
+    "numeric_features": {
+      "milestone_count": 3,
+      "advance_percentage": 30,
+      "mid_percentage": 40,
+      "final_percentage": 30
+    },
+    "source_descriptor": "synthesized from standard Indian software and design project contracts"
+  },
+  {
+    "id": "BC-011",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "payment",
+    "text": "All invoices are due and payable within thirty (30) days of the invoice date. Invoices unpaid after the due date shall accrue interest at eighteen percent (18%) per annum (1.5% per month) from the due date until payment is received in full.",
+    "numeric_features": {
+      "payment_terms_days": 30,
+      "late_interest_rate_annual_pct": 18,
+      "late_interest_rate_monthly_pct": 1.5
+    },
+    "source_descriptor": "synthesized from Indian commercial services agreements and MSMED Act guidance"
+  },
+  {
+    "id": "BC-012",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "payment",
+    "text": "For time-and-materials engagements, the contractor shall submit monthly invoices within five (5) business days of the end of each calendar month. Invoices shall detail the hours worked and work performed. Payment is due within thirty (30) days of the invoice date.",
+    "numeric_features": {
+      "invoice_frequency": "monthly",
+      "invoice_submission_lag_days": 5,
+      "payment_terms_days": 30
+    },
+    "source_descriptor": "synthesized from standard Indian IT and consulting services contracts"
+  },
+  {
+    "id": "BC-013",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "confidentiality",
+    "text": "Each party agrees to hold the other's Confidential Information in strict confidence and not to disclose it to any third party or use it for any purpose other than performing obligations under this agreement. These obligations survive termination for a period of two (2) years.",
+    "numeric_features": {
+      "post_term_survival_years": 2,
+      "is_mutual": true
+    },
+    "source_descriptor": "synthesized from standard Indian bilateral NDA and services agreement templates"
+  },
+  {
+    "id": "BC-014",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "confidentiality",
+    "text": "Confidential Information does not include information that: (a) is or becomes publicly available through no fault of the receiving party; (b) was rightfully known by the receiving party prior to disclosure; (c) is independently developed by the receiving party without use of the disclosing party's information; or (d) is required to be disclosed by law or court order, provided the disclosing party is given prompt written notice.",
+    "numeric_features": {
+      "public_domain_exception": true,
+      "independent_development_exception": true,
+      "prior_knowledge_exception": true,
+      "legal_compulsion_exception": true
+    },
+    "source_descriptor": "synthesized from standard Indian commercial agreements"
+  },
+  {
+    "id": "BC-015",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "confidentiality",
+    "text": "Upon termination or expiration of this agreement, or upon request, each party shall promptly return or certifiably destroy all Confidential Information of the other party and provide written confirmation of destruction within ten (10) business days.",
+    "numeric_features": {
+      "destruction_confirmation_days": 10,
+      "return_or_destroy_required": true
+    },
+    "source_descriptor": "synthesized from standard Indian information security and services agreements"
+  },
+  {
+    "id": "BC-016",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "non_compete",
+    "text": "The parties expressly agree that no post-termination non-compete obligation shall apply to the contractor. In accordance with Section 27 of the Indian Contract Act, 1872, any agreement in restraint of trade is void, and the contractor remains free to undertake any professional engagement after the termination of this agreement.",
+    "numeric_features": {
+      "post_term_non_compete": false,
+      "ica_27_compliant": true
+    },
+    "source_descriptor": "synthesized from standard Indian freelance agreements, legally compliant with §27 ICA"
+  },
+  {
+    "id": "BC-017",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "non_solicit",
+    "text": "During the term of this agreement only, the contractor shall not directly solicit the client's employees or direct clients with whom the contractor had substantive contact during this engagement, for the purpose of engaging them for competing services.",
+    "numeric_features": {
+      "scope": "during_term_only",
+      "post_term_non_solicit": false,
+      "applies_to": "direct_contacts_only"
+    },
+    "source_descriptor": "synthesized from market-standard Indian freelance agreements"
+  },
+  {
+    "id": "BC-018",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "indemnification",
+    "text": "Each party shall indemnify and hold harmless the other from any claims, damages, and costs (including reasonable legal fees) arising from: (a) that party's breach of this agreement; or (b) that party's negligence or willful misconduct. Total indemnification liability of either party shall not exceed the total fees paid under this agreement in the twelve (12) months preceding the event.",
+    "numeric_features": {
+      "is_mutual": true,
+      "cap_months_of_fees": 12,
+      "covers_legal_fees": true
+    },
+    "source_descriptor": "synthesized from standard Indian professional services agreements"
+  },
+  {
+    "id": "BC-019",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "indemnification",
+    "text": "The contractor shall indemnify the client against third-party claims alleging that contractor-created deliverables infringe any third party's intellectual property rights, provided the infringement arises solely from contractor-created content and not from client-provided specifications or assets.",
+    "numeric_features": {
+      "ip_indemnity": true,
+      "carve_out_client_instructions": true
+    },
+    "source_descriptor": "synthesized from Indian software and creative services agreements"
+  },
+  {
+    "id": "BC-020",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "dispute_resolution",
+    "text": "Any dispute arising out of or in connection with this agreement shall be referred to and finally resolved by arbitration under the Arbitration and Conciliation Act, 1996. The seat of arbitration shall be [City of Contractor's Registered Address]. A sole arbitrator shall be appointed by mutual agreement of the parties within fifteen (15) days of the dispute arising, failing which appointment shall be made per the Act.",
+    "numeric_features": {
+      "arbitration_seat": "contractor_city",
+      "arbitrator_count": 1,
+      "appointment_period_days": 15
+    },
+    "source_descriptor": "synthesized from standard Indian commercial arbitration clauses"
+  },
+  {
+    "id": "BC-021",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "governing_law",
+    "text": "This agreement shall be governed by and construed in accordance with the laws of India. Subject to the arbitration clause, the courts at [City of Contractor's Registered Address] shall have exclusive jurisdiction over any disputes not referred to arbitration.",
+    "numeric_features": {
+      "governing_law": "India",
+      "jurisdiction": "contractor_city"
+    },
+    "source_descriptor": "synthesized from standard Indian freelance agreements"
+  },
+  {
+    "id": "BC-022",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "force_majeure",
+    "text": "Neither party shall be in breach for delays caused by events beyond their reasonable control, including: natural disasters, acts of government authority, war, terrorism, pandemic declared by the WHO or Government of India, or prolonged utility outages exceeding seventy-two (72) hours. The affected party must provide written notice within forty-eight (48) hours of the event.",
+    "numeric_features": {
+      "is_symmetric": true,
+      "notice_required_hours": 48,
+      "utility_outage_threshold_hours": 72
+    },
+    "source_descriptor": "synthesized from Indian commercial services agreements"
+  },
+  {
+    "id": "BC-023",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "force_majeure",
+    "text": "If a force majeure event continues for more than thirty (30) days, either party may terminate this agreement with seven (7) days' written notice. The contractor shall be entitled to payment for all work completed up to the date of termination.",
+    "numeric_features": {
+      "force_majeure_suspension_days_before_termination": 30,
+      "termination_notice_days": 7,
+      "pro_rata_payment": true
+    },
+    "source_descriptor": "synthesized from market-standard Indian commercial contracts"
+  },
+  {
+    "id": "BC-024",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "governing_law",
+    "text": "This agreement constitutes the entire agreement between the parties with respect to its subject matter and supersedes all prior agreements, representations, and understandings. Any amendment to this agreement must be in writing and signed by authorized representatives of both parties.",
+    "numeric_features": {
+      "entire_agreement_clause": true,
+      "written_amendment_required": true
+    },
+    "source_descriptor": "synthesized from standard Indian commercial agreements"
+  },
+  {
+    "id": "BC-025",
+    "doc_type": "freelance_services_agreement",
+    "clause_type": "acceptance",
+    "text": "The client shall notify the contractor in writing of acceptance or rejection (with specific defects listed) within ten (10) business days of delivery. Failure to provide written feedback within this period shall constitute deemed acceptance. The contractor shall correct any valid defects within fifteen (15) business days of notification at no additional charge.",
+    "numeric_features": {
+      "acceptance_window_days": 10,
+      "deemed_acceptance": true,
+      "defect_correction_days": 15
+    },
+    "source_descriptor": "synthesized from standard Indian IT and software development agreements"
+  },
+  {
+    "id": "BC-026",
+    "doc_type": "nda",
+    "clause_type": "confidential_information_definition",
+    "text": "Confidential Information means any information disclosed by the Disclosing Party that is marked 'Confidential', 'Proprietary', or with a similar designation at the time of disclosure.",
+    "numeric_features": {
+      "marking_required": true
+    },
+    "source_descriptor": "synthesized from standard Indian bilateral NDA templates"
+  },
+  {
+    "id": "BC-027",
+    "doc_type": "nda",
+    "clause_type": "confidential_information_definition",
+    "text": "Confidential Information includes, whether or not marked as confidential: business plans, financial projections, customer data, technical specifications, software code, product roadmaps, trade secrets, and pricing information, where such categories are disclosed in the context of the purpose described in Schedule A.",
+    "numeric_features": {
+      "marking_required": false,
+      "category_based": true
+    },
+    "source_descriptor": "synthesized from market-standard Indian mutual NDA templates"
+  },
+  {
+    "id": "BC-028",
+    "doc_type": "nda",
+    "clause_type": "confidential_information_definition",
+    "text": "Verbal or visual disclosures of Confidential Information shall be confirmed in writing within seven (7) business days of disclosure to be covered under this agreement.",
+    "numeric_features": {
+      "oral_disclosure_confirmation_days": 7
+    },
+    "source_descriptor": "synthesized from standard Indian NDA practice"
+  },
+  {
+    "id": "BC-029",
+    "doc_type": "nda",
+    "clause_type": "confidential_information_definition",
+    "text": "The Receiving Party may use general skills, knowledge, and experience retained in the unaided memory of its personnel who have had access to the Disclosing Party's Confidential Information, provided such use does not constitute a breach of any specific obligation under this agreement (Residual Information Exception).",
+    "numeric_features": {
+      "residual_exception": true
+    },
+    "source_descriptor": "synthesized from international NDA practice adapted for Indian law"
+  },
+  {
+    "id": "BC-030",
+    "doc_type": "nda",
+    "clause_type": "confidentiality_obligation",
+    "text": "The Receiving Party shall hold the Confidential Information in strict confidence and shall protect it with at least the same degree of care it uses to protect its own confidential information, but in no event less than reasonable care.",
+    "numeric_features": {
+      "standard_of_care": "same_as_own_minimum_reasonable"
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates"
+  },
+  {
+    "id": "BC-031",
+    "doc_type": "nda",
+    "clause_type": "confidentiality_obligation",
+    "text": "The Receiving Party shall restrict disclosure of Confidential Information to its employees, contractors, and advisors who have a genuine need to know for the purpose of this agreement and who are bound by confidentiality obligations at least as protective as those in this agreement.",
+    "numeric_features": {
+      "need_to_know_restriction": true,
+      "downstream_binding_required": true
+    },
+    "source_descriptor": "synthesized from standard Indian commercial NDA templates"
+  },
+  {
+    "id": "BC-032",
+    "doc_type": "nda",
+    "clause_type": "confidentiality_obligation",
+    "text": "The Receiving Party shall obtain prior written approval from the Disclosing Party before disclosing Confidential Information to any third party other than those described above. Such approval shall not be unreasonably withheld.",
+    "numeric_features": {
+      "third_party_prior_approval": true
+    },
+    "source_descriptor": "synthesized from market-standard Indian NDA templates"
+  },
+  {
+    "id": "BC-033",
+    "doc_type": "nda",
+    "clause_type": "confidentiality_obligation",
+    "text": "If the Receiving Party discovers any unauthorized use or disclosure of Confidential Information, it shall promptly notify the Disclosing Party in writing — and in any event within forty-eight (48) hours of discovery — and shall take all reasonable steps to prevent further unauthorized use or disclosure.",
+    "numeric_features": {
+      "breach_notification_hours": 48
+    },
+    "source_descriptor": "synthesized from Indian information security and NDA practice"
+  },
+  {
+    "id": "BC-034",
+    "doc_type": "nda",
+    "clause_type": "exceptions",
+    "text": "Confidential Information does not include information that is or becomes publicly known through no breach of this agreement by the Receiving Party.",
+    "numeric_features": {
+      "public_domain_exception": true
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates"
+  },
+  {
+    "id": "BC-035",
+    "doc_type": "nda",
+    "clause_type": "exceptions",
+    "text": "Confidential Information does not include information that the Receiving Party can demonstrate was independently developed by it without any use of, or reference to, the Disclosing Party's Confidential Information.",
+    "numeric_features": {
+      "independent_development_exception": true
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates"
+  },
+  {
+    "id": "BC-036",
+    "doc_type": "nda",
+    "clause_type": "exceptions",
+    "text": "Confidential Information does not include information that was already known to the Receiving Party, without restriction, at the time of disclosure, as evidenced by written records predating the disclosure.",
+    "numeric_features": {
+      "prior_knowledge_exception": true,
+      "written_records_required": true
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates"
+  },
+  {
+    "id": "BC-037",
+    "doc_type": "nda",
+    "clause_type": "exceptions",
+    "text": "If the Receiving Party is required by law, regulation, or valid court order to disclose Confidential Information, it shall give the Disclosing Party prompt written notice (where legally permitted) and shall cooperate with the Disclosing Party in seeking a protective order. The Receiving Party shall disclose only the minimum amount required by law.",
+    "numeric_features": {
+      "legal_compulsion_exception": true,
+      "minimum_disclosure_principle": true,
+      "advance_notice_required": true
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates"
+  },
+  {
+    "id": "BC-038",
+    "doc_type": "nda",
+    "clause_type": "term",
+    "text": "This agreement shall commence on the Effective Date and continue for a period of two (2) years, unless earlier terminated by either party with thirty (30) days' written notice.",
+    "numeric_features": {
+      "term_years": 2,
+      "termination_notice_days": 30
+    },
+    "source_descriptor": "synthesized from market-standard Indian NDA practice"
+  },
+  {
+    "id": "BC-039",
+    "doc_type": "nda",
+    "clause_type": "post_term_confidentiality",
+    "text": "Confidentiality obligations shall survive the expiration or termination of this agreement for a period of three (3) years with respect to general business information. Confidentiality obligations regarding trade secrets shall survive until such information lawfully enters the public domain.",
+    "numeric_features": {
+      "general_info_survival_years": 3,
+      "trade_secret_survival": "indefinite"
+    },
+    "source_descriptor": "synthesized from market-standard Indian NDA templates"
+  },
+  {
+    "id": "BC-040",
+    "doc_type": "nda",
+    "clause_type": "term",
+    "text": "The provisions of this agreement relating to confidentiality, ownership of information, remedies, and governing law shall survive the termination or expiration of this agreement.",
+    "numeric_features": {
+      "survival_clause": true
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates"
+  },
+  {
+    "id": "BC-041",
+    "doc_type": "nda",
+    "clause_type": "return_of_information",
+    "text": "Upon termination of this agreement, or upon the Disclosing Party's written request, the Receiving Party shall promptly return to the Disclosing Party, or certifiably destroy, all tangible materials containing or embodying the Disclosing Party's Confidential Information.",
+    "numeric_features": {
+      "return_or_destroy_required": true
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates"
+  },
+  {
+    "id": "BC-042",
+    "doc_type": "nda",
+    "clause_type": "return_of_information",
+    "text": "Within ten (10) business days of destruction, the Receiving Party shall provide a written certificate of destruction signed by an authorized representative, confirming that all Confidential Information has been destroyed and is irretrievable.",
+    "numeric_features": {
+      "destruction_certificate_days": 10,
+      "signed_certificate_required": true
+    },
+    "source_descriptor": "synthesized from Indian information security and NDA practice"
+  },
+  {
+    "id": "BC-043",
+    "doc_type": "nda",
+    "clause_type": "remedies",
+    "text": "The parties acknowledge that any breach or threatened breach of this agreement would cause irreparable harm for which monetary damages would be an inadequate remedy, and that the Disclosing Party shall be entitled to seek injunctive relief and specific performance in addition to any other remedies available at law or equity.",
+    "numeric_features": {
+      "injunctive_relief_available": true,
+      "specific_performance_available": true,
+      "irreparable_harm_acknowledged": true
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates; consistent with Specific Relief Act, 1963, §38"
+  },
+  {
+    "id": "BC-044",
+    "doc_type": "nda",
+    "clause_type": "remedies",
+    "text": "Failure or delay by either party to enforce any provision of this agreement shall not constitute a waiver of that party's rights to enforce such provision or any other provision in the future.",
+    "numeric_features": {
+      "no_waiver_clause": true
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates"
+  },
+  {
+    "id": "BC-045",
+    "doc_type": "nda",
+    "clause_type": "remedies",
+    "text": "Each party's obligations under this agreement are unique and the Disclosing Party shall have the right, in addition to any other legal remedy, to seek specific performance of this agreement in any court of competent jurisdiction.",
+    "numeric_features": {
+      "specific_performance_clause": true
+    },
+    "source_descriptor": "synthesized from Indian NDA practice consistent with Specific Relief Act, 1963, §10"
+  },
+  {
+    "id": "BC-046",
+    "doc_type": "nda",
+    "clause_type": "governing_law",
+    "text": "This agreement shall be governed by and construed in accordance with the laws of India. The courts at [City] shall have exclusive jurisdiction over any disputes arising under this agreement.",
+    "numeric_features": {
+      "governing_law": "India"
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates"
+  },
+  {
+    "id": "BC-047",
+    "doc_type": "nda",
+    "clause_type": "dispute_resolution",
+    "text": "Any dispute arising from this agreement shall be finally resolved by arbitration under the Arbitration and Conciliation Act, 1996, with the seat at [City], and shall be conducted by a sole arbitrator appointed by mutual agreement.",
+    "numeric_features": {
+      "arbitration_act": "Arbitration and Conciliation Act 1996",
+      "seat": "mutual_city",
+      "arbitrator_count": 1
+    },
+    "source_descriptor": "synthesized from standard Indian commercial arbitration clauses"
+  },
+  {
+    "id": "BC-048",
+    "doc_type": "nda",
+    "clause_type": "mutual_obligations",
+    "text": "This agreement is mutual. Both parties acknowledge they may serve as Disclosing Party and Receiving Party simultaneously, and all obligations apply equally to both parties in their respective roles.",
+    "numeric_features": {
+      "is_mutual": true
+    },
+    "source_descriptor": "synthesized from standard mutual Indian NDA practice"
+  },
+  {
+    "id": "BC-049",
+    "doc_type": "nda",
+    "clause_type": "no_license",
+    "text": "Nothing in this agreement grants the Receiving Party any right, title, license, or interest in or to the Disclosing Party's Confidential Information, intellectual property, or technology, other than the right to use such information solely for the purpose described in Schedule A.",
+    "numeric_features": {
+      "no_license_granted": true,
+      "use_limited_to_purpose": true
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates"
+  },
+  {
+    "id": "BC-050",
+    "doc_type": "nda",
+    "clause_type": "no_warranty",
+    "text": "All Confidential Information is provided 'as is'. The Disclosing Party makes no representations or warranties, express or implied, as to the accuracy, completeness, or fitness for any particular purpose of any Confidential Information.",
+    "numeric_features": {
+      "no_accuracy_warranty": true
+    },
+    "source_descriptor": "synthesized from standard Indian NDA templates"
+  },
+  {
+    "id": "BC-051",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "role_and_reporting",
+    "text": "You are being offered the position of [Job Title] in the [Department] team, reporting to [Manager Title]. Your primary place of work will be [City, State], with flexibility for remote work as mutually agreed.",
+    "numeric_features": {
+      "reporting_structure_defined": true,
+      "location_specified": true
+    },
+    "source_descriptor": "synthesized from standard Indian employment offer letter templates"
+  },
+  {
+    "id": "BC-052",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "compensation",
+    "text": "Your annual Cost to Company (CTC) is ₹[Amount], comprising: Fixed Gross Salary: ₹[Amount] per annum; Performance Bonus (variable): up to ₹[Amount] per annum, subject to achievement of annual targets defined in your performance plan; and statutory contributions as applicable.",
+    "numeric_features": {
+      "ctc_breakdown_provided": true,
+      "variable_component": true
+    },
+    "source_descriptor": "synthesized from standard Indian startup and technology company offer letters"
+  },
+  {
+    "id": "BC-053",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "compensation",
+    "text": "Your performance and compensation will be reviewed annually. Variable pay (if any) is entirely discretionary, linked to company and individual performance, and shall not be payable if performance targets are not met.",
+    "numeric_features": {
+      "review_frequency": "annual",
+      "variable_pay_discretionary": true
+    },
+    "source_descriptor": "synthesized from standard Indian company employment documents"
+  },
+  {
+    "id": "BC-054",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "compensation",
+    "text": "A joining bonus of ₹[Amount] will be paid with your first salary, subject to applicable taxes. If you resign or are terminated for cause within twelve (12) months of your joining date, you agree to refund the full net joining bonus amount.",
+    "numeric_features": {
+      "joining_bonus": true,
+      "clawback_months": 12,
+      "cause_included_in_clawback": true
+    },
+    "source_descriptor": "synthesized from Indian technology company and startup offer letters"
+  },
+  {
+    "id": "BC-055",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "probation",
+    "text": "Your employment is subject to a probation period of six (6) months from your date of joining. The company reserves the right to extend the probation period by up to three (3) additional months based on performance evaluation, with written notice.",
+    "numeric_features": {
+      "probation_months": 6,
+      "extension_possible_months": 3,
+      "written_notice_required": true
+    },
+    "source_descriptor": "synthesized from Indian employment law practice and standard HR documents"
+  },
+  {
+    "id": "BC-056",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "probation",
+    "text": "During the probation period, either party may terminate the employment with thirty (30) days' written notice or payment of salary in lieu thereof.",
+    "numeric_features": {
+      "probation_notice_days": 30,
+      "pay_in_lieu_available": true,
+      "is_symmetric": true
+    },
+    "source_descriptor": "synthesized from standard Indian employment offer letter practice"
+  },
+  {
+    "id": "BC-057",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "notice_period",
+    "text": "Upon confirmation of your employment following the probation period, either party may terminate the employment relationship with sixty (60) days' written notice or payment of basic salary in lieu of notice for the unexpired notice period.",
+    "numeric_features": {
+      "post_probation_notice_days": 60,
+      "pay_in_lieu_available": true,
+      "is_symmetric": true
+    },
+    "source_descriptor": "synthesized from standard Indian technology company employment terms"
+  },
+  {
+    "id": "BC-058",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "notice_period",
+    "text": "The company may, at its discretion, pay you your basic salary for the notice period in lieu of requiring you to work during that period (garden leave). During any garden leave, you remain bound by your obligations of confidentiality, IP assignment, and non-solicitation.",
+    "numeric_features": {
+      "pay_in_lieu_available": true,
+      "garden_leave_clause": true,
+      "obligations_continue_during_garden_leave": true
+    },
+    "source_descriptor": "synthesized from Indian corporate employment agreements"
+  },
+  {
+    "id": "BC-059",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "notice_period",
+    "text": "The company reserves the right to terminate your employment immediately without notice or payment in lieu in the event of: (a) gross misconduct; (b) willful breach of company policies; (c) fraud, dishonesty, or criminal conviction; or (d) unauthorized disclosure of confidential information.",
+    "numeric_features": {
+      "summary_termination_for_cause": true,
+      "no_notice_required_for_cause": true
+    },
+    "source_descriptor": "synthesized from standard Indian employment law and HR practice"
+  },
+  {
+    "id": "BC-060",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "notice_period",
+    "text": "During the notice period, you may be required to perform your normal duties, hand over responsibilities to a designated person, or placed on garden leave at the company's option. In all cases, your remuneration continues through the notice period.",
+    "numeric_features": {
+      "handover_required": true,
+      "remuneration_continues_during_notice": true
+    },
+    "source_descriptor": "synthesized from Indian corporate employment practice"
+  },
+  {
+    "id": "BC-061",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "ip_assignment",
+    "text": "All work product, inventions, software, designs, and other intellectual property created by you during the course of your employment and using company resources shall be owned by the company as the first owner of copyright under Section 17 of the Indian Copyright Act, 1957. You hereby assign all such rights to the company to the extent they do not vest automatically.",
+    "numeric_features": {
+      "employer_first_owner": true,
+      "requires_company_resources": true,
+      "ica_17_cited": true
+    },
+    "source_descriptor": "synthesized from Indian employment law and Copyright Act §17 practice"
+  },
+  {
+    "id": "BC-062",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "ip_assignment",
+    "text": "You agree to execute any documents reasonably required by the company to perfect its intellectual property ownership. You waive any right to attribution in company products and agree that the company may publish, modify, or commercialize the work product without attribution to you, to the extent permissible under applicable law.",
+    "numeric_features": {
+      "further_assurance_obligation": true
+    },
+    "source_descriptor": "synthesized from Indian technology company employment agreements"
+  },
+  {
+    "id": "BC-063",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "ip_assignment",
+    "text": "Pre-existing intellectual property owned by you prior to your date of joining, as disclosed in Schedule A to this offer letter, is excluded from this IP assignment. Any use of your pre-existing IP in company projects requires written approval from the company.",
+    "numeric_features": {
+      "pre_existing_ip_carved_out": true,
+      "disclosure_required": true,
+      "written_approval_for_use": true
+    },
+    "source_descriptor": "synthesized from standard Indian employment agreements"
+  },
+  {
+    "id": "BC-064",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "confidentiality",
+    "text": "During your employment and for a period of two (2) years thereafter, you shall maintain strict confidentiality of all proprietary, technical, business, and customer information you access in the course of your employment. This obligation is mutual: the company shall also treat your personal employment information with confidentiality.",
+    "numeric_features": {
+      "post_employment_duration_years": 2,
+      "is_mutual": true
+    },
+    "source_descriptor": "synthesized from Indian employment law and standard HR documentation"
+  },
+  {
+    "id": "BC-065",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "confidentiality",
+    "text": "The company shall process your personal data only for lawful employment purposes and in compliance with the Digital Personal Data Protection Act, 2023 (DPDPA). You consent to such processing and shall be provided a Privacy Notice detailing data handling practices within 7 days of joining.",
+    "numeric_features": {
+      "dpdpa_compliant": true,
+      "privacy_notice_days": 7
+    },
+    "source_descriptor": "synthesized to comply with India's Digital Personal Data Protection Act, 2023"
+  },
+  {
+    "id": "BC-066",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "confidentiality",
+    "text": "Upon cessation of employment, you shall promptly return all company property, documents, data, devices, and confidential information in your possession or control, and shall certify in writing that you have retained no copies in any format.",
+    "numeric_features": {
+      "return_of_property_required": true,
+      "written_certification_required": true
+    },
+    "source_descriptor": "synthesized from standard Indian exit management HR practice"
+  },
+  {
+    "id": "BC-067",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "non_compete",
+    "text": "The parties acknowledge that post-employment non-compete restrictions are void under Section 27 of the Indian Contract Act, 1872. No post-employment non-compete obligation is imposed by this offer letter. You remain free to pursue any professional engagement after your employment ends.",
+    "numeric_features": {
+      "post_employment_non_compete": false,
+      "ica_27_compliant": true
+    },
+    "source_descriptor": "synthesized from market-standard Indian employment law practice"
+  },
+  {
+    "id": "BC-068",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "non_solicit",
+    "text": "For a period of twelve (12) months following the termination of your employment, you shall not directly solicit or encourage any employee of the company with whom you had substantive professional contact during your employment to leave the company.",
+    "numeric_features": {
+      "non_solicit_employees_months": 12,
+      "scope": "direct_contact_only"
+    },
+    "source_descriptor": "synthesized from Indian employment law practice; generally more enforceable than non-competes"
+  },
+  {
+    "id": "BC-069",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "non_solicit",
+    "text": "For a period of twelve (12) months following the termination of your employment, you shall not directly solicit any client of the company with whom you had direct, personal engagement during the twelve (12) months preceding your termination, for purposes of providing competing services.",
+    "numeric_features": {
+      "non_solicit_clients_months": 12,
+      "lookback_period_months": 12,
+      "scope": "direct_contact_only"
+    },
+    "source_descriptor": "synthesized from Indian employment law practice"
+  },
+  {
+    "id": "BC-070",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "benefits",
+    "text": "You will receive the following statutory benefits: (a) Provident Fund contributions per the Employees' Provident Fund and Miscellaneous Provisions Act, 1952; (b) Employee State Insurance (ESI) contributions as applicable; and (c) Gratuity as per the Payment of Gratuity Act, 1972, after completing five (5) years of continuous service.",
+    "numeric_features": {
+      "pf_provided": true,
+      "esi_provided": true,
+      "gratuity_threshold_years": 5
+    },
+    "source_descriptor": "synthesized from Indian labour law statutory requirements"
+  },
+  {
+    "id": "BC-071",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "benefits",
+    "text": "The company provides group health insurance coverage of ₹[Amount] per annum, covering you and up to [N] dependents (spouse and children). Details of coverage, exclusions, and the insurer are provided in the separate Health Insurance Policy document.",
+    "numeric_features": {
+      "health_insurance": true,
+      "family_coverage": true
+    },
+    "source_descriptor": "synthesized from standard Indian employer health insurance practice"
+  },
+  {
+    "id": "BC-072",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "benefits",
+    "text": "You are entitled to: eighteen (18) days of Earned Leave per year (accruing at 1.5 days per month); twelve (12) days of Casual Leave per year (non-accruing); and national holidays as declared by the company annually, a list of which will be circulated at the start of each calendar year.",
+    "numeric_features": {
+      "earned_leave_days": 18,
+      "casual_leave_days": 12,
+      "national_holidays_included": true
+    },
+    "source_descriptor": "synthesized from Indian Shops and Establishments Act practice and standard employer norms"
+  },
+  {
+    "id": "BC-073",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "governing_law",
+    "text": "This offer letter and the employment relationship shall be governed by the laws of India. Any dispute arising from this offer letter or your employment shall be subject to the jurisdiction of the courts at [City of Employment].",
+    "numeric_features": {
+      "governing_law": "India",
+      "jurisdiction": "city_of_employment"
+    },
+    "source_descriptor": "synthesized from standard Indian employment offer letters"
+  },
+  {
+    "id": "BC-074",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "entire_agreement",
+    "text": "This offer letter, together with the schedules annexed hereto, constitutes the entire agreement between the parties regarding your employment and supersedes all prior discussions, representations, and understandings. Any modification must be in writing and signed by an authorized representative of the company.",
+    "numeric_features": {
+      "entire_agreement": true,
+      "written_modification_required": true
+    },
+    "source_descriptor": "synthesized from standard Indian employment documentation"
+  },
+  {
+    "id": "BC-075",
+    "doc_type": "employment_offer_letter",
+    "clause_type": "offer_validity",
+    "text": "This offer is valid for seven (7) calendar days from the date of issue. If not accepted in writing within this period, the offer lapses automatically. Acceptance requires your signature on the duplicate copy of this letter.",
+    "numeric_features": {
+      "offer_validity_days": 7,
+      "written_acceptance_required": true
+    },
+    "source_descriptor": "synthesized from standard Indian employment offer practice"
+  }
+]

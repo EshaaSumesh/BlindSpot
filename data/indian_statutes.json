@@ -1,0 +1,395 @@
+[
+  {
+    "id": "IS-001",
+    "act_name": "Indian Contract Act, 1872",
+    "section": "10",
+    "section_title": "What agreements are contracts",
+    "text_summary": "All agreements are contracts if made by the free consent of parties competent to contract, for a lawful consideration and with a lawful object, and are not hereby expressly declared to be void.",
+    "applicable_situations": [
+      "contract_validity",
+      "capacity_to_contract",
+      "free_consent"
+    ],
+    "enforceability_implication": "A contract missing any of these elements — free consent, competency, lawful consideration, lawful object — is not enforceable as a contract under Indian law."
+  },
+  {
+    "id": "IS-002",
+    "act_name": "Indian Contract Act, 1872",
+    "section": "23",
+    "section_title": "What considerations and objects are lawful",
+    "text_summary": "Consideration or the object of an agreement is unlawful if it is forbidden by law, fraudulent, causes injury to the person or property of another, the court regards it as immoral, or as opposed to public policy. Every agreement of which the object or consideration is unlawful is void.",
+    "applicable_situations": [
+      "unlawful_clauses",
+      "public_policy_violations",
+      "penalty_clauses",
+      "grossly_unfair_terms"
+    ],
+    "enforceability_implication": "Contract clauses that are contrary to public policy — such as exclusions of liability for willful misconduct, unlimited penalties, or waivers of statutory rights — are void under §23."
+  },
+  {
+    "id": "IS-003",
+    "act_name": "Indian Contract Act, 1872",
+    "section": "27",
+    "section_title": "Agreement in restraint of trade, void",
+    "text_summary": "Every agreement by which any one is restrained from exercising a lawful profession, trade, or business of any kind, is to that extent void. Exception: the seller of goodwill of a business may agree with the buyer to refrain from carrying on a similar business within specified local limits.",
+    "applicable_situations": [
+      "non_compete_post_employment",
+      "non_compete_post_engagement",
+      "industry_wide_restrictions"
+    ],
+    "enforceability_implication": "Post-engagement and post-employment non-compete clauses are void and unenforceable in India under §27, with a narrow exception for sale of business goodwill. This is a fundamental difference from UK, US, and Singapore law."
+  },
+  {
+    "id": "IS-004",
+    "act_name": "Indian Contract Act, 1872",
+    "section": "28",
+    "section_title": "Agreements in restraint of legal proceedings, void",
+    "text_summary": "Every agreement by which any party thereto is restricted absolutely from enforcing his rights under or in respect of any contract, by the usual legal proceedings in the ordinary tribunals, or which limits the time within which he may thus enforce his rights, is void to that extent.",
+    "applicable_situations": [
+      "foreign_jurisdiction_clauses",
+      "waiver_of_legal_rights",
+      "unreasonably_short_limitation_clauses"
+    ],
+    "enforceability_implication": "Clauses that deprive an Indian party of the right to approach Indian courts — or that impose unreasonably short limitation periods — may be void under §28. Foreign jurisdiction exclusion clauses may also be affected."
+  },
+  {
+    "id": "IS-005",
+    "act_name": "Indian Contract Act, 1872",
+    "section": "29",
+    "section_title": "Agreements void for uncertainty",
+    "text_summary": "Agreements, the meaning of which is not certain, or capable of being made certain, are void.",
+    "applicable_situations": [
+      "vague_acceptance_criteria",
+      "undefined_deliverables",
+      "subjective_performance_standards",
+      "unlimited_revision_obligations"
+    ],
+    "enforceability_implication": "Clauses where key terms are defined by client satisfaction, future discretion, or inherently subjective standards may be void for uncertainty. This applies to deliverable scope, acceptance criteria, penalty triggers, and termination rights."
+  },
+  {
+    "id": "IS-006",
+    "act_name": "Indian Contract Act, 1872",
+    "section": "39",
+    "section_title": "Effect of refusal of party to perform promise wholly",
+    "text_summary": "When a party to a contract has refused to perform, or disabled himself from performing, his promise in its entirety, the promisee may put an end to the contract, unless he has signified, by words or conduct, his acquiescence in its continuance.",
+    "applicable_situations": [
+      "anticipatory_breach",
+      "termination_for_breach",
+      "repudiation_of_contract"
+    ],
+    "enforceability_implication": "A party who refuses to perform their side of the contract gives the other party the right to treat the contract as ended. Automatic termination clauses for minor, non-fundamental breaches may be challenged under this section."
+  },
+  {
+    "id": "IS-007",
+    "act_name": "Indian Contract Act, 1872",
+    "section": "56",
+    "section_title": "Agreement to do impossible act",
+    "text_summary": "An agreement to do an act impossible in itself is void. A contract to do an act which, after the contract is made, becomes impossible, or, by reason of some event which the promisor could not prevent, unlawful, shall become void when the act becomes impossible or unlawful.",
+    "applicable_situations": [
+      "force_majeure",
+      "supervening_impossibility",
+      "frustration_of_contract"
+    ],
+    "enforceability_implication": "Where performance becomes genuinely impossible due to supervening events (natural disaster, government prohibition, pandemic), the contract is discharged under §56. Force majeure clauses in contracts supplement, and must be consistent with, this statutory right."
+  },
+  {
+    "id": "IS-008",
+    "act_name": "Indian Contract Act, 1872",
+    "section": "65",
+    "section_title": "Obligation of person who has received advantage under void agreement",
+    "text_summary": "When an agreement is discovered to be void, or when a contract becomes void, any person who has received any advantage under such agreement or contract is bound to restore it, or to make compensation for it, to the person from whom he received it.",
+    "applicable_situations": [
+      "ip_reversion_on_void_contract",
+      "restitution_on_termination",
+      "unjust_enrichment"
+    ],
+    "enforceability_implication": "A client who receives work product under a contract that is later voided or terminated must make restitution for the benefit received. IP clauses that transfer rights without corresponding payment may trigger §65 restoration obligations."
+  },
+  {
+    "id": "IS-009",
+    "act_name": "Indian Contract Act, 1872",
+    "section": "73",
+    "section_title": "Compensation for loss or damage caused by breach of contract",
+    "text_summary": "When a contract has been broken, the party who suffers by such breach is entitled to receive, from the party who has broken it, compensation for any loss or damage caused to him thereby, which naturally arose in the usual course of things from such breach, or which the parties knew, when they made the contract, to be likely to result from the breach of it.",
+    "applicable_situations": [
+      "breach_of_payment_obligation",
+      "termination_compensation",
+      "non_delivery_damages"
+    ],
+    "enforceability_implication": "Compensation under §73 is limited to foreseeable and actual losses. Clauses that attempt to exclude all liability for breach, or conversely, that impose damages far exceeding actual loss, will be adjusted by courts applying §73."
+  },
+  {
+    "id": "IS-010",
+    "act_name": "Indian Contract Act, 1872",
+    "section": "74",
+    "section_title": "Compensation for breach of contract where penalty stipulated for",
+    "text_summary": "When a contract has been broken, if a sum is named in the contract as the amount to be paid in case of such breach, or if the contract contains any other stipulation by way of penalty, the party complaining of the breach is entitled, whether or not actual damage or loss is proved to have been caused thereby, to receive from the party who has broken the contract reasonable compensation not exceeding the amount so named.",
+    "applicable_situations": [
+      "liquidated_damages_clauses",
+      "penalty_clauses",
+      "kill_fees",
+      "late_payment_penalties"
+    ],
+    "enforceability_implication": "Indian courts do not enforce grossly disproportionate penalty clauses. The maximum payable is reasonable compensation not exceeding the stipulated amount. Penalty clauses that exceed actual foreseeable loss may be reduced by courts to a reasonable sum."
+  },
+  {
+    "id": "IS-011",
+    "act_name": "Indian Copyright Act, 1957",
+    "section": "17",
+    "section_title": "First owner of copyright",
+    "text_summary": "Subject to the provisions of this Act, the author of a work shall be the first owner of the copyright therein. Provided that in the case of a work made by the author in the course of his employment under a contract of service or apprenticeship, in the absence of any agreement to the contrary, the employer shall be the first owner of the copyright.",
+    "applicable_situations": [
+      "employer_employee_ip",
+      "work_made_for_hire",
+      "commissioned_works",
+      "freelance_ip_ownership"
+    ],
+    "enforceability_implication": "For employee-created works made in the course of employment, the employer is automatically the first owner. For freelancers (not employees), ownership remains with the creator unless explicitly assigned. This is a critical distinction in Indian IP law."
+  },
+  {
+    "id": "IS-012",
+    "act_name": "Indian Copyright Act, 1957",
+    "section": "18",
+    "section_title": "Assignment of copyright",
+    "text_summary": "The owner of the copyright in an existing work or the prospective owner of the copyright in a future work may assign to any person the copyright either wholly or partially and either generally or subject to limitations and either for the whole term of the copyright or any part thereof. In the case of a future work, the assignment shall take effect only when the work comes into existence.",
+    "applicable_situations": [
+      "ip_assignment_clauses",
+      "future_works_assignment",
+      "partial_assignment"
+    ],
+    "enforceability_implication": "Copyright assignment is valid under Indian law but must comply with §19 formality requirements. Assignment of 'all future works' without specifying what the work is may be too uncertain to be enforceable."
+  },
+  {
+    "id": "IS-013",
+    "act_name": "Indian Copyright Act, 1957",
+    "section": "19",
+    "section_title": "Mode of assignment",
+    "text_summary": "No assignment of the copyright in any work shall be valid unless it is in writing signed by the assignor or by his duly authorised agent. The assignment shall identify the work, specify the rights assigned, and the duration and territorial extent of such assignment. It shall also specify the amount of royalty payable to the author.",
+    "applicable_situations": [
+      "ip_assignment_validity",
+      "informal_ip_transfers",
+      "assignment_without_consideration"
+    ],
+    "enforceability_implication": "An oral assignment of copyright is invalid. Written, signed assignments must identify the work and specify the rights. Assignments without specified royalty or consideration are legally deficient and may be challenged."
+  },
+  {
+    "id": "IS-014",
+    "act_name": "Indian Copyright Act, 1957",
+    "section": "19A",
+    "section_title": "Disputes with respect to assignment of copyright",
+    "text_summary": "If an assignee fails to exercise the rights assigned to him within a period of one year from the date of assignment, and the assignment was for a period greater than one year, the assignment shall be deemed to have lapsed after one year, unless otherwise stipulated in the assignment.",
+    "applicable_situations": [
+      "dormant_ip_assignments",
+      "non_use_of_assigned_rights",
+      "ip_reversion"
+    ],
+    "enforceability_implication": "Where a client receives an IP assignment but fails to use or exploit the assigned rights within one year, the assignment may be treated as lapsed under §19A. Contracts should specify the duration of the assignment to avoid this."
+  },
+  {
+    "id": "IS-015",
+    "act_name": "Indian Copyright Act, 1957",
+    "section": "57",
+    "section_title": "Author's special rights (Moral Rights)",
+    "text_summary": "Independently of the author's copyright and even after the assignment, wholly or partially, of the said copyright, the author of a work shall have the right: (a) to claim authorship of the work; and (b) to restrain or claim damages in respect of any distortion, mutilation, modification or other act in relation to the said work which is done before the expiration of the term of copyright if such distortion, mutilation, modification or other act would be prejudicial to his honour or reputation.",
+    "applicable_situations": [
+      "moral_rights_waiver_clauses",
+      "attribution_clauses",
+      "modification_of_work"
+    ],
+    "enforceability_implication": "An author's right to claim authorship and to object to prejudicial distortion of their work cannot be contractually waived under Indian law. These rights exist independently of and survive copyright assignment."
+  },
+  {
+    "id": "IS-016",
+    "act_name": "Indian Copyright Act, 1957",
+    "section": "2(d)",
+    "section_title": "Definition of 'Author'",
+    "text_summary": "In relation to a computer-generated work, the person who causes the work to be created is the 'author'. In relation to a literary, dramatic, musical, or artistic work, the author is the person who actually creates the work.",
+    "applicable_situations": [
+      "ai_generated_content_ownership",
+      "computer_generated_work",
+      "software_authorship"
+    ],
+    "enforceability_implication": "For AI-generated or computer-generated content, the person who caused the work to be created (typically the operator of the AI system) is the author for copyright purposes, not the AI system itself."
+  },
+  {
+    "id": "IS-017",
+    "act_name": "Information Technology Act, 2000",
+    "section": "43",
+    "section_title": "Penalty and compensation for damage to computer, computer system, etc.",
+    "text_summary": "If any person without permission of the owner or any other person who is in charge of a computer, computer system or computer network, accesses or secures access to such computer, system or network, or downloads, copies, or extracts any data, the person shall be liable to pay damages by way of compensation to the person so affected.",
+    "applicable_situations": [
+      "unauthorized_access_to_systems",
+      "data_theft",
+      "misappropriation_of_confidential_data"
+    ],
+    "enforceability_implication": "Unauthorized access to a client's or contractor's computer systems or exfiltration of data gives the victim a civil remedy for compensation. This applies to disgruntled employees accessing systems after termination."
+  },
+  {
+    "id": "IS-018",
+    "act_name": "Information Technology Act, 2000",
+    "section": "43A",
+    "section_title": "Compensation for failure to protect data",
+    "text_summary": "Where a body corporate, possessing, dealing, or handling any sensitive personal data or information, is negligent in implementing and maintaining reasonable security practices and procedures and thereby causes wrongful loss or wrongful gain to any person, such body corporate shall be liable to pay damages by way of compensation to the person so affected.",
+    "applicable_situations": [
+      "data_breach_liability",
+      "data_security_obligations",
+      "sensitive_personal_data_handling"
+    ],
+    "enforceability_implication": "Organisations handling sensitive personal data (health, financial, biometric information) are strictly obligated to maintain reasonable security practices. No liability cap is specified, making data-breach liability potentially unlimited for negligent data handling."
+  },
+  {
+    "id": "IS-019",
+    "act_name": "Information Technology Act, 2000",
+    "section": "72",
+    "section_title": "Breach of confidentiality and privacy",
+    "text_summary": "Any person who, in pursuance of any of the powers conferred under this Act, has secured access to any electronic record, book, register, correspondence, information, document or other material without the consent of the person concerned discloses such material shall be punished with imprisonment for a term which may extend to two years, or with fine which may extend to one lakh rupees, or with both.",
+    "applicable_situations": [
+      "confidentiality_breach",
+      "unauthorized_disclosure_of_data",
+      "government_access_to_records"
+    ],
+    "enforceability_implication": "Primarily applies to government officials misusing information accessed under IT Act powers. Provides criminal remedy for breach of confidentiality involving electronic records, supplementing civil contract remedies."
+  },
+  {
+    "id": "IS-020",
+    "act_name": "Information Technology Act, 2000",
+    "section": "72A",
+    "section_title": "Punishment for disclosure of information in breach of lawful contract",
+    "text_summary": "Any person including an intermediary who, while providing services under the terms of a lawful contract, has secured access to any material containing personal information about another person, with the intent to cause or knowing that he is likely to cause wrongful loss or wrongful gain discloses, without the consent of the person concerned, or in breach of a lawful contract, such material shall be punished with imprisonment for a term which may extend to three years, or with a fine which may extend to five lakh rupees, or with both.",
+    "applicable_situations": [
+      "employee_data_breach",
+      "contractor_data_misuse",
+      "personal_information_disclosure"
+    ],
+    "enforceability_implication": "Service providers and contractors who access personal data under a lawful contract and disclose it in breach of that contract face criminal penalties under §72A, including up to 3 years imprisonment. This is in addition to civil remedies."
+  },
+  {
+    "id": "IS-021",
+    "act_name": "Information Technology Act, 2000",
+    "section": "66C",
+    "section_title": "Punishment for identity theft",
+    "text_summary": "Whoever, fraudulently or dishonestly makes use of the electronic signature, password, or any other unique identification feature of any other person shall be punished with imprisonment of either description for a term which may extend to three years and shall also be liable to fine which may extend to one lakh rupees.",
+    "applicable_situations": [
+      "credential_theft",
+      "account_hijacking",
+      "unauthorized_use_of_login"
+    ],
+    "enforceability_implication": "Fraudulent use of another person's digital credentials — such as an employee using a departing employee's login — constitutes a criminal offence under §66C, independent of any contractual breach."
+  },
+  {
+    "id": "IS-022",
+    "act_name": "Consumer Protection Act, 2019",
+    "section": "2(47)",
+    "section_title": "Definition of 'unfair contract'",
+    "text_summary": "Unfair contract means a contract between a manufacturer or trader or service provider, on one hand, and a consumer, on the other, having such terms which cause significant change in the rights of such consumer, including terms that require a consumer to pay a disproportionate penalty for breach, require a consumer to give manifestly excessive security deposits, or deny a consumer the right to terminate the contract.",
+    "applicable_situations": [
+      "disproportionate_penalty_clauses",
+      "excessive_security_deposits",
+      "auto_renewal_without_notice",
+      "denial_of_exit_rights"
+    ],
+    "enforceability_implication": "Where a freelancer or startup qualifies as a 'consumer' under the Act, clauses imposing disproportionate penalties, excessive deposits, automatic renewals without notification, or denial of the right to exit may be declared void as unfair contract terms."
+  },
+  {
+    "id": "IS-023",
+    "act_name": "Consumer Protection Act, 2019",
+    "section": "2(6)",
+    "section_title": "Definition of 'complaint'",
+    "text_summary": "A complaint includes any allegation in writing by a complainant that contains allegations of an unfair contract, with a view to obtaining relief from the Consumer Commission.",
+    "applicable_situations": [
+      "consumer_forum_recourse",
+      "unfair_contract_terms_remedy"
+    ],
+    "enforceability_implication": "A complainant can approach the Consumer Commission to challenge any contractual term qualifying as 'unfair' under the Act. This creates an additional legal avenue beyond civil courts for challenging oppressive contract terms."
+  },
+  {
+    "id": "IS-024",
+    "act_name": "Consumer Protection Act, 2019",
+    "section": "49(2)",
+    "section_title": "Power of State Commission to declare unfair contract terms void",
+    "text_summary": "The State Commission shall have the power to declare any term of a contract, which is unfair to any consumer, to be null and void.",
+    "applicable_situations": [
+      "unfair_terms_enforcement",
+      "automatic_renewal_clauses",
+      "excessive_penalty_enforcement"
+    ],
+    "enforceability_implication": "State Consumer Commissions have the power to strike down specific unfair contract terms without voiding the entire contract. This creates a surgical remedy for individual oppressive clauses."
+  },
+  {
+    "id": "IS-025",
+    "act_name": "Consumer Protection Act, 2019",
+    "section": "58",
+    "section_title": "Jurisdiction of the National Commission",
+    "text_summary": "Subject to the other provisions of this Act, the National Commission shall have jurisdiction to entertain complaints where the value of the goods or services paid as consideration exceeds rupees ten crore.",
+    "applicable_situations": [
+      "high_value_contract_disputes",
+      "national_commission_jurisdiction"
+    ],
+    "enforceability_implication": "For high-value contracts (above ₹10 crore consideration), the National Consumer Commission has jurisdiction. For lower-value matters, District or State Commissions apply. This affects the forum for consumer complaint remedies."
+  },
+  {
+    "id": "IS-026",
+    "act_name": "Specific Relief Act, 1963",
+    "section": "10",
+    "section_title": "Specific performance of contracts",
+    "text_summary": "The specific performance of a contract shall be enforced by the court subject to the provisions contained in sub-section (2) of section 11, section 14 and section 16. (As amended by the Specific Relief (Amendment) Act, 2018, specific performance is now the rule rather than the exception.)",
+    "applicable_situations": [
+      "specific_performance_of_delivery",
+      "enforcement_of_payment_obligation",
+      "unique_deliverable_contracts"
+    ],
+    "enforceability_implication": "Post the 2018 amendment, courts in India must ordinarily grant specific performance of contracts unless specific exceptions under §14 apply. This strengthens the contractor's ability to compel delivery of services or payment beyond merely claiming damages."
+  },
+  {
+    "id": "IS-027",
+    "act_name": "Specific Relief Act, 1963",
+    "section": "14",
+    "section_title": "Contracts not specifically enforceable",
+    "text_summary": "Specific performance cannot be enforced in favor of or against: (a) parties where the contract is for substituted performance; (b) contracts involving continuous duty requiring court supervision; or (c) determinable contracts (contracts that either party can terminate at will).",
+    "applicable_situations": [
+      "at_will_contracts",
+      "easily_terminable_engagements",
+      "continuous_supervision_contracts"
+    ],
+    "enforceability_implication": "Contracts that are easily terminable at will by either party cannot be specifically enforced. Adding proper termination provisions with notice periods and conditions avoids this limitation and preserves the right to seek specific performance."
+  },
+  {
+    "id": "IS-028",
+    "act_name": "Specific Relief Act, 1963",
+    "section": "20",
+    "section_title": "Discretion as to decreeing specific performance",
+    "text_summary": "The jurisdiction to decree specific performance is discretionary, and the court is not bound to grant such relief merely because it is lawful to do so. The court will not grant specific performance where compensation in money is an adequate relief, or where the contract has been made by a mistake, or where it would be inequitable and unjust.",
+    "applicable_situations": [
+      "hardship_defence",
+      "adequacy_of_damages",
+      "equitable_defences"
+    ],
+    "enforceability_implication": "Courts retain discretion to refuse specific performance where monetary compensation would be adequate. This is relevant for standard services contracts — courts are more likely to grant specific performance for unique or irreplaceable deliverables."
+  },
+  {
+    "id": "IS-029",
+    "act_name": "Specific Relief Act, 1963",
+    "section": "38",
+    "section_title": "Perpetual injunction when granted",
+    "text_summary": "A perpetual injunction may be granted to prevent the breach of an obligation existing in favour of the applicant. In contracts, the court shall be guided by the rules in Chapter II of the Act. Perpetual injunctions are granted where the defendant has committed or is threatening to commit a breach of contract.",
+    "applicable_situations": [
+      "confidentiality_breach_injunction",
+      "ip_infringement_injunction",
+      "preventing_misuse_of_trade_secrets"
+    ],
+    "enforceability_implication": "A party can seek a perpetual injunction to prevent ongoing or threatened breach of confidentiality or IP obligations. This is the primary remedy for situations where monetary damages are inadequate — such as misappropriation of trade secrets."
+  },
+  {
+    "id": "IS-030",
+    "act_name": "Specific Relief Act, 1963",
+    "section": "41",
+    "section_title": "Injunction when refused",
+    "text_summary": "An injunction cannot be granted to restrain a party from prosecuting judicial proceedings, from applying to legislative bodies, from prosecuting a criminal matter, to prevent breach of a contract not specifically enforceable, or where the applicant has acquiesced in the conduct complained of, or has insufficient interest.",
+    "applicable_situations": [
+      "injunction_limits",
+      "enforceability_of_non_compete_injunctions",
+      "arbitration_clauses_and_injunctions"
+    ],
+    "enforceability_implication": "Crucially, an injunction cannot be granted to prevent breach of a contract that is itself not specifically enforceable (such as a personal services contract or an at-will contract). This limits the remedy available to enforce post-employment non-competes, which are void under §27 ICA."
+  }
+]
