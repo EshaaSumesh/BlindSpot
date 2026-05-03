@@ -1,0 +1,4 @@
+{
+  "key": "fa6e4bb26929527107ffa5014e556625",
+  "response": "```json\n{\n  \"verdict\": \"market_standard\",\n  \"reasoning\": \"This is a standard preamble identifying the parties and agreement type. The deviation score of 1.0 indicates it aligns perfectly with the market median.\"\n}\n```"
+}

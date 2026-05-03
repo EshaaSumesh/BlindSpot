@@ -1,0 +1,4 @@
+{
+  "key": "a64b7806f932b1e34c3114e2a567174d",
+  "response": "```json\n{\n  \"clauses_for_adversary\": [],\n  \"reasoning\": \"No clauses met the criteria for adversary analysis. The provided clause has low severity and is considered market standard.\"\n}\n```"
+}

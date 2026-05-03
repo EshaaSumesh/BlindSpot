@@ -1,0 +1,4 @@
+{
+  "key": "71bbc9c4a65cbd94c4750e7cc4dac3aa",
+  "response": "```json\n{\n  \"doc_type\": \"vendor_msa\",\n  \"doc_type_confidence\": 0.98,\n  \"clauses\": [\n    {\n      \"id\": \"clause_1\",\n      \"section_header\": \"INTELLECTUAL PROPERTY\",\n      \"text\": \"The Service Provider hereby assigns to the Client"
+}

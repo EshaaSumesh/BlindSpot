@@ -1,0 +1,4 @@
+{
+  "key": "1269889d5a0769628c38040b0d28353f",
+  "response": "```json\n{\n  \"clauses_for_adversary\": [\n    \"clause_4\",\n    \"clause_3\",\n    \"clause_1\",\n    \"clause_2\"\n  ],\n  \"reasoning\": \"All clauses were flagged for adversary analysis due to receiving 'high' severity verdicts from the Jurist and being identified as 'non_standard' or 'outlier' by the Benchmarker. This combination indicates a significant potential for risk.\"\n}\n```"
+}

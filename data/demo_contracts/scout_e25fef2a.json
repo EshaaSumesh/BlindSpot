@@ -1,0 +1,4 @@
+{
+  "key": "e25fef2a4d41edd18cb7cefd8d98b820",
+  "response": "```json\n{\n  \"doc_type\": \"nda\",\n  \"doc_type_confidence\": 1.0,\n  \"clauses\": [\n    {\n      \"id\": \"clause_1\",\n      \"section_header\": \"Clause 1: Confidentiality.\",\n      \"text\": \"Both parties agree to keep secrets.\",\n      \"clause_type\": \"confidentiality\"\n    }\n  ]\n}\n```"
+}

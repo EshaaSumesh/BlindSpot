@@ -1,0 +1,4 @@
+{
+  "key": "c715f8225b924d69649f8d7c38a5a0a8",
+  "response": "```json\n{\n  \"verdict\": \"outlier\",\n  \"reasoning\": \"The 120-day payment term is four times the market standard. The unilateral right to deduct 25% for vague, unjustified fees is an extremely aggressive, non-market provision.\"\n}\n```"
+}

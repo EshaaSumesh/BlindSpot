@@ -1,0 +1,4 @@
+{
+  "key": "b2ebb56769408fb256eefdb028bf76e1",
+  "response": "```json\n{\n  \"verdict\": \"market_standard\",\n  \"reasoning\": \"Provider retaining its background IP while granting the client a non-exclusive license is a foundational and highly common market standard for service agreements.\"\n}\n```"
+}

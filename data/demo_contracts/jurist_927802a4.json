@@ -1,0 +1,4 @@
+{
+  "key": "927802a464a1eca0658bd1ddb01bf448",
+  "response": "```json\n{\n  \"verdict_label\": \"non_standard\",\n  \"severity\": \"low\",\n  \"reasons\": [\n    \"The clause creates a significant imbalance in termination rights, favoring the freelancer.\",\n    \"It grants the Service Provider a broad right to terminate for convenience.\",\n    \"The Client's right to terminate is restricted to material breach, providing security.\",\n    \"This asymmetry is unusual but"
+}

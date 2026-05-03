@@ -1,0 +1,4 @@
+{
+  "key": "568d9e0407114499c1f074b6942d5f9a",
+  "response": "```json\n{\n  \"verdict\": \"market_standard\",\n  \"reasoning\": \"The deviation score of 1.00 indicates this clause is the market median. It contains typical provisions for governing law, exclusive jurisdiction, and common waivers.\"\n}\n```"
+}

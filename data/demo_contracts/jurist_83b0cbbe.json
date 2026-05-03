@@ -1,0 +1,4 @@
+{
+  "key": "83b0cbbe4478672aea31074ee45f321a",
+  "response": "```json\n{\n  \"verdict_label\": \"predatory\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"The company can unilaterally deduct funds without providing any justification.\",\n    \"Deduction reasons like 'Discretionary Quality Audits' are vague and arbitrary.\",\n    \"The clause denies the service provider an opportunity to dispute deductions.\",\n    \"A 120-day payment term is excessively long and unfavorable for a freelancer.\"\n  ],\n  \"citations\": [\n    \"LR-022\",\n    \"LR-019\"\n  ]\n}\n```"
+}

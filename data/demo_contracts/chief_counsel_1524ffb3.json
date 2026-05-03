@@ -1,0 +1,4 @@
+{
+  "key": "1524ffb352d8c71320fb6d86a60bbcec",
+  "response": "```json\n{\n  \"clauses_for_adversary\": [\n    \"clause_1\"\n  ],\n  \"reasoning\": \"Flagged clause_1 as it meets both criteria for review: it has a 'high' jurist severity rating and is marked as an 'outlier' by the benchmarker, indicating it is both potentially harmful and non-standard.\"\n}\n```"
+}

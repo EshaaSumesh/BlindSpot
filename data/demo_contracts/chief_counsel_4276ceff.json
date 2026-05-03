@@ -1,0 +1,4 @@
+{
+  "key": "4276ceff3ec51323cbbd88b295bc69c7",
+  "response": "```json\n{\n  \"conflicts\": [],\n  \"synthesis_summary\": \"This contract presents a significant risk profile. While there are no direct conflicts based on the specified criteria, both the Jurist and Benchmarker consistently flag clauses as highly problematic. The Jurist identifies multiple 'predatory' clauses and one 'unenforceable' clause, indicating severe legal risks. The Benchmarker corroborates this by classifying these same clauses as 'non_standard' or 'outlier', confirming they deviate substantially from market norms. The overall assessment is one of high risk, and these clauses require immediate and thorough legal review before proceeding.\"\n}\n```"
+}

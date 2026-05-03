@@ -1,0 +1,4 @@
+{
+  "key": "07627ccc41498ba25da7e7fce046cfdd",
+  "response": "```json\n{\n  \"clauses_for_adversary\": [\n    \"clause_1\",\n    \"clause_3\",\n    \"clause_4\"\n  ],\n  \"reasoning\": \"Flagging clauses with high or medium severity ratings from the Jurist analysis for further red-team review.\"\n}\n```"
+}

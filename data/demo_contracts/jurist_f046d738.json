@@ -1,0 +1,4 @@
+{
+  "key": "f046d738f2d89e584f9edcde091dd976",
+  "response": "```json\n{\n  \"verdict_label\": \"predatory\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"The clause forces litigation in a remote and expensive jurisdiction (Port Blair).\",\n    \"This creates an oppressive procedural hurdle, discouraging the freelancer from suing.\",\n    \"It effectively restricts the freelancer from enforcing their legal rights.\",\n    \"The choice of venue ignores the convenience of all parties involved.\"\n  ],\n  \"citations\": [\n    \"LR-041\",\n    \"IS-004\"\n  ],\n  \"enforceability_note\": \"While Indian courts permit exclusive jurisdiction clauses, they may be set aside if found to be oppressive, unjust, or contrary to public policy, especially when the chosen court has no connection to the parties or the contract's performance.\"\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "key": "bb05f3a023b05f59cd6de092861efe93",
+  "response": "```json\n{\n  \"conflicts\": [],\n  \"synthesis_summary\": \"No direct conflicts were found under the specified rules. However, there is a strong consensus that the contract contains multiple high-risk clauses. The Jurist consistently identifies clauses as 'predatory' or 'unenforceable', indicating severe legal and business risk. The Benchmarker corroborates this by flagging the same clauses as 'non_standard' or 'outlier', confirming they deviate significantly from market norms. The overall risk profile of this contract is high and requires immediate and thorough legal review before proceeding.\"\n}\n```"
+}

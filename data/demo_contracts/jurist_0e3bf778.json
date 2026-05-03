@@ -1,0 +1,4 @@
+{
+  "key": "0e3bf7788b774540bd8e077420ddd6b8",
+  "response": "```json\n{\n  \"verdict_label\": \"predatory\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"The liability cap is set at 50% of the project fee, which is commercially unreasonable.\",\n    \"A cap significantly below the contract value may be considered against public policy.\",\n    \"This clause severely limits the client's right to reasonable compensation for a breach.\",\n    \"Courts may find such a low liability cap to be void and unenforceable.\"\n  ],\n  \"citations\": [\n    \"LR-036\",\n    \"IS-009\"\n  ],\n  \"enforceability_note\": \"Under the Indian Contract Act, 1872, courts may refuse to enforce a liability cap that is so low it is deemed unconscionable or contrary to public policy, potentially rendering the clause void.\"\n}\n```"
+}

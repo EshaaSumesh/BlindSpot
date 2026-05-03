@@ -1,0 +1,4 @@
+{
+  "key": "a3667dcf321348f66d9c60a86c676684",
+  "response": "```json\n{\n  \"doc_type\": \"nda\",\n  \"doc_type_confidence\": 1.0,\n  \"clauses\": [\n    {\n      \"id\": \"clause_1\",\n      \"section_header\": null,\n      \"text\": \"\u201cConfidential Information\u201d shall mean and include all non -public information, written"
+}

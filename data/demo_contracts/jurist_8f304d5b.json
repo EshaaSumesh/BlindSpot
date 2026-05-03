@@ -1,0 +1,4 @@
+{
+  "key": "8f304d5b5996a7f4fbb5722ab6201005",
+  "response": "```json\n{\n  \"verdict_label\": \"predatory\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"Denies payment for work already performed, violating restitution principles.\",\n    \"Allows termination at the client's sole discretion, which is void for uncertainty.\",\n    \"Extinguishes the right to compensation for work completed before termination.\",\n    \"Fails to compensate for the advantage received by the client pre-termination.\"\n  ],\n  \"citations\": [\n    \"LR-013\",\n    \"LR-011\",\n    \"LR-012\",\n    \"IS-008\"\n  ],\n  \"enforceability_note\": \"This clause is likely unenforceable in India as it contravenes Sections 65 and 73 of the Indian Contract Act, 1872, which mandate compensation for work performed.\"\n}\n```"
+}

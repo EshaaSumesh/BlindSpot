@@ -1,0 +1,4 @@
+{
+  "key": "be01fafe4fbfc17af995d0cc369aac2a",
+  "response": "```json\n{\n  \"doc_type\": \"employment_agreement\",\n  \"doc_type_confidence\": 1.0,\n  \"clauses\": [\n    {\n      \"id\": \"clause_1\",\n      \"section_header\": \"1. DEFINITIONS\",\n      \"text\": \"\u201cCause\u201d means any of the following"
+}

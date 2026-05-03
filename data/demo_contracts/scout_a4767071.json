@@ -1,0 +1,4 @@
+{
+  "key": "a476707133efe2edb69e841d6c0b716f",
+  "response": "```json\n{\n  \"doc_type\": \"freelance_services_agreement\",\n  \"doc_type_confidence\": 0.98,\n  \"clauses\": [\n    {\n      \"id\": \"clause_1\",\n      \"section_header\": null,\n      \"text\": \"This document is provided solely for illustrative purposes as"
+}

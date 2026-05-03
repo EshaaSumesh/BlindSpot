@@ -1,0 +1,4 @@
+{
+  "key": "6e2e29cba6efb313773053435c8d4d5d",
+  "response": "```json\n{\n  \"reasoning\": \"The document is unclassified (DocType.UNKNOWN) and has no identified clauses, making it a high-risk item. A parallel, multi-agent review is essential for triage. Investigator must run to determine the document's fundamental nature and context. Jurist is required to perform a preliminary scan for any language that could create legal risk or obligation, regardless of format. Benchmarker will compare the document against a broad corpus to help classify it and identify what it might be. This concurrent approach is the most efficient way to identify, classify, and assess this unknown document.\"\n}\n```"
+}

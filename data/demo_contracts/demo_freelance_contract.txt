@@ -1,0 +1,27 @@
+FREELANCE SERVICES AGREEMENT
+
+This Freelance Services Agreement ("Agreement") is made on this 1st day of June 2026, by and between:
+Acme Studios Pvt Ltd, located at 123 Tech Park, Bangalore ("Client")
+AND
+Priya Sharma, located at 456 Main St, Mumbai ("Contractor").
+
+1. SERVICES
+The Contractor agrees to provide frontend development services for the Client's new web application project.
+
+2. PAYMENT
+The Client shall pay the Contractor a fixed fee of ₹5,00,000 for the completion of the services. Payment shall be made within 60 days of receipt of an approved invoice.
+
+3. INTELLECTUAL PROPERTY
+The Contractor hereby assigns to the Client all right, title, and interest in and to any and all work product, inventions, tools, frameworks, and intellectual property, including pre-existing IP and tools developed prior to this engagement, that are used or incorporated into the deliverables.
+
+4. CONFIDENTIALITY
+The Contractor agrees to hold all Client information in strict confidence and not disclose it to any third party.
+
+5. NON-COMPETE
+The Contractor agrees not to provide similar frontend development services to any competing company in India for a period of 2 years following the termination of this Agreement.
+
+6. TERMINATION
+The Client may terminate this Agreement at any time without cause by providing 5 days' written notice to the Contractor. The Contractor may terminate this Agreement by providing 45 days' written notice to the Client.
+
+7. GOVERNING LAW
+This Agreement shall be governed by the laws of India.

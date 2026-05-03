@@ -1,0 +1,4 @@
+{
+  "key": "b87ae0c086f4ca6192d3e6c6839a106b",
+  "response": "```json\n{\n  \"verdict\": \"outlier\",\n  \"reasoning\": \"The clause is overly simplistic and lacks essential details like definitions, duration, and exceptions, which are fundamental to standard confidentiality obligations.\"\n}\n```"
+}

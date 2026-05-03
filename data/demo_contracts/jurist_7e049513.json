@@ -1,0 +1,4 @@
+{
+  "key": "7e049513d673ca61236683b6946db3fe",
+  "response": "```json\n{\n  \"verdict_label\": \"unenforceable\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"Post-termination non-compete clauses are generally void in India.\",\n    \"The 36-month duration is excessively long and unreasonable.\",\n    \"The geographic scope of the entire Republic of India is overly broad.\",\n    \"The liquidated damages amount is likely an unenforceable penalty.\",\n    \"Courts only award reasonable compensation, not a fixed penalty amount.\"\n  ],\n  \"citations\": [\n    \"IS-010\"\n  ],\n  \"enforceability_note\": \"Under Section 27 of the Indian Contract Act, 1872, agreements in restraint of trade are void. Post-termination non-compete restrictions are almost universally held to be unenforceable by Indian courts.\"\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "key": "4d694f1f2809fe084ad0c81908beea61",
+  "response": "```json\n{\n  \"verdict_label\": \"standard\",\n  \"severity\": \"low\",\n  \"reasons\": [\n    \"The provided text is a document title, not an operative clause.\",\n    \"This title describes a standard type of legal agreement in India.\",\n    \"The title itself does not create any legal obligations or risks.\"\n  ],\n  \"citations\": [],\n  \"enforceability_note\": null\n}\n```"
+}

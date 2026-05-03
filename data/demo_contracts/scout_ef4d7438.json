@@ -1,0 +1,4 @@
+{
+  "key": "ef4d743847245dcef86c616df53f49e4",
+  "response": "```json\n{\n  \"doc_type\": \"employment_agreement\",\n  \"doc_type_confidence\": 0.95,\n  \"clauses\": [\n    {\n      \"id\": \"clause_1\",\n      \"section_header\": null,\n      \"text\": \"This confidentiality and intellectual property assignment agreement (\\\" Agreement\\\") is entered"
+}

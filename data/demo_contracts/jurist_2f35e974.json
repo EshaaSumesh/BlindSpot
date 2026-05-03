@@ -1,0 +1,4 @@
+{
+  "key": "2f35e9749fc1ce538324a581711d83aa",
+  "response": "```json\n{\n  \"verdict_label\": \"standard\",\n  \"severity\": \"low\",\n  \"reasons\": [\n    \"This clause is a standard preamble to an agreement.\",\n    \"It correctly identifies the parties involved in the contract.\",\n    \"The text establishes the nature of the document as a Master Services Agreement.\",\n    \"No substantive rights or obligations are created in this section.\"\n  ],\n  \"citations\": [],\n  \"enforceability_note\": null\n}\n```"
+}

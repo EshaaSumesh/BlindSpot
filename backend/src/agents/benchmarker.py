@@ -39,30 +39,60 @@ class BenchmarkerAgent(BaseAgent):
         doc_type: str,
         retriever
     ) -> BenchmarkResult:
-        """Compare clause against benchmark corpus."""
+        """Compare clause against benchmark corpus using LLM."""
 
         # Find similar clauses
         similar = retriever.find_similar_clauses(
             clause.text,
             doc_type_filter=doc_type,
-            k=10
+            k=5
         )
 
-        # Compute deviation score
+        # Compute basic deviation score
         deviation = self._compute_deviation(clause, similar)
 
         # Extract numerical features
         features = self._extract_numerical_features(clause.text)
+        
+        # Determine verdict and reasoning via LLM
+        system = """You are the Benchmarker, an expert in contract market standards.
+Your task is to analyze a clause and compare it against similar benchmark clauses to determine if it is market standard, non-standard, or an outlier.
 
-        # Determine verdict
-        if deviation > 2.0:
-            verdict = "outlier"
-        elif deviation > 1.5:
-            verdict = "non_standard"
-        else:
-            verdict = "market_standard"
+Output a JSON object with this exact structure:
+{
+  "verdict": "string (one of: 'market_standard', 'non_standard', 'outlier')",
+  "reasoning": "string (brief explanation, <= 30 words, why it deviates or aligns with market)"
+}
+"""
+        prompt = f"""Target Clause ({clause.clause_type}):
+{clause.text}
 
-        reasoning = self._generate_reasoning(clause, similar, deviation)
+Computed Deviation Score (1.0 = median): {deviation:.2f}
+
+Comparable Market Clauses:
+{json.dumps(similar, indent=2)}
+
+Provide your verdict and reasoning as JSON.
+"""
+        try:
+            response_text = self.call_llm(prompt, system=system, temperature=0.1)
+            import re
+            json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
+            if json_match:
+                result = json.loads(json_match.group())
+                verdict = result.get("verdict", "market_standard")
+                reasoning = result.get("reasoning", "Aligns with market norms.")
+            else:
+                raise ValueError("No JSON found")
+        except Exception as e:
+            # Fallback if LLM fails
+            if deviation > 2.0:
+                verdict = "outlier"
+            elif deviation > 1.5:
+                verdict = "non_standard"
+            else:
+                verdict = "market_standard"
+            reasoning = f"Automated fallback reasoning. Deviation: {deviation:.2f}"
 
         return BenchmarkResult(
             deviation_score=deviation,
@@ -142,14 +172,3 @@ class BenchmarkerAgent(BaseAgent):
             features["percentage"] = float(pct_match.group(1))
 
         return features
-
-    def _generate_reasoning(self, clause: Clause, neighbors: List[Dict], deviation: float) -> str:
-        """Generate human-readable reasoning for the deviation score."""
-        if deviation > 2.0:
-            return f"Clause is {deviation:.1f}x stricter than market median. Significant deviation from standard practice."
-        elif deviation > 1.5:
-            return f"Clause is {deviation:.1f}x market median. Notable deviation from standard contracts."
-        elif deviation < 0.7:
-            return f"Clause is {1/deviation:.1f}x more lenient than market median. Favorable to contractor."
-        else:
-            return f"Clause aligns with market standard (deviation: {deviation:.2f})."

@@ -25,7 +25,7 @@ class BaseAgent(ABC):
         self.state: Optional[BlindspotState] = None
         self._client = None
 
-        if settings.google_api_key:
+        if settings.google_api_key and settings.llm_enabled:
             self._client = genai.Client(api_key=settings.google_api_key)
 
     @property
@@ -38,11 +38,23 @@ class BaseAgent(ABC):
         self.state = state
 
     def call_llm(self, prompt: str, system: str = "", temperature: float = 0.1) -> str:
-        """Call Gemini API using new google.genai package."""
-        if not settings.google_api_key:
-            if settings.demo_mode:
-                return f"[DEMO MODE] Mock response from {self.name}"
-            raise ValueError("Google API key not configured")
+        """Call Gemini API using new google.genai package, with cache fallback."""
+        
+        # Generate cache key
+        from src.cache.cache_layer import global_cache
+        cache_inputs = {"agent": self.name, "prompt": prompt, "system": system}
+        cache_key = global_cache.get_cache_key(cache_inputs)
+
+        # Check cache if demo mode is enabled or if LLM is disabled
+        if settings.demo_mode or not settings.llm_enabled:
+            cached = global_cache.get_cached_response(cache_key)
+            if cached is not None:
+                return cached
+            if not settings.llm_enabled:
+                raise RuntimeError(f"Live LLM disabled and no cache hit for {self.name}")
+
+        if not settings.google_api_key or not settings.llm_enabled:
+            raise ValueError("Live LLM disabled or Google API key not configured")
 
         if not self._client:
             raise ValueError("Gemini client not initialized")
@@ -69,10 +81,37 @@ class BaseAgent(ABC):
                 ),
             )
 
-            return response.text or ""
+            result_text = None
+            if response.text:
+                result_text = response.text
+            else:
+                parts = []
+                for candidate in response.candidates or []:
+                    content = getattr(candidate, "content", None)
+                    for part in getattr(content, "parts", []) or []:
+                        text = getattr(part, "text", "")
+                        if text:
+                            parts.append(text)
+                if parts:
+                    result_text = "\n".join(parts)
+
+            if result_text:
+                # Save to cache on successful call
+                global_cache.set_cached_response(cache_key, result_text, prefix=self.name)
+                return result_text
+
+            finish_reasons = [
+                str(getattr(candidate, "finish_reason", "unknown"))
+                for candidate in response.candidates or []
+            ]
+            raise RuntimeError(f"Gemini returned no text. Finish reasons: {finish_reasons}")
 
         except Exception as e:
-            raise RuntimeError(f"Gemini API call failed for {self.name}: {str(e)}")
+            # Fallback to cache on error
+            cached = global_cache.get_cached_response(cache_key)
+            if cached is not None:
+                return cached
+            raise RuntimeError(f"Gemini API call failed for {self.name} and no cache hit: {str(e)}")
 
     @abstractmethod
     def run(self) -> Dict[str, Any]:

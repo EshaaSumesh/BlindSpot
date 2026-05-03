@@ -1,0 +1,4 @@
+{
+  "key": "9bc30e256a82a39030edc677db737353",
+  "response": "```json\n{\n  \"verdict\": \"market_standard\",\n  \"reasoning\": \"The liability cap and exclusion of consequential losses are common. The deviation score of 1.0 confirms the clause is at the market median, making it standard.\"\n}\n```"
+}

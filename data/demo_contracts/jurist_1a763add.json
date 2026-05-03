@@ -1,0 +1,4 @@
+{
+  "key": "1a763addc489233c45a99e495a65bb96",
+  "response": "```json\n{\n  \"verdict_label\": \"unenforceable\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"The term 'secrets' is undefined, making the scope of the obligation uncertain.\",\n    \"The clause lacks a specific duration, implying a potentially perpetual and unreasonable term.\",\n    \"It fails to include any standard exceptions for legally required disclosures.\",\n    \"Extreme vagueness makes the clause difficult for a court to interpret and enforce.\"\n  ],\n  \"citations\": [\n    \"LR-025\"\n  ],\n  \"enforceability_note\": \"Under the Indian Contract Act, 1872, an agreement which is uncertain is void. The term 'secrets' is not defined, making the clause likely unenforceable due to vagueness.\"\n}\n```"
+}

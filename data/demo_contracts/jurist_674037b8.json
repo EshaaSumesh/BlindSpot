@@ -1,0 +1,4 @@
+{
+  "key": "674037b8d39f0d998a2e8699732f136a",
+  "response": "```json\n{\n  \"verdict_label\": \"standard\",\n  \"severity\": \"low\",\n  \"reasons\": [\n    \"This is a standard document title and preamble.\",\n    \"The text does not contain any substantive legal terms.\",\n    \"It merely identifies the document as an employment agreement.\",\n    \"No obligations or restrictions are imposed by this text.\"\n  ],\n  \"citations\": [],\n  \"enforceability_note\": null\n}\n```"
+}

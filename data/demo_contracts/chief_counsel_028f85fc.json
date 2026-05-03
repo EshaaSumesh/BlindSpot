@@ -1,0 +1,4 @@
+{
+  "key": "028f85fc92227563f8d3c7750fa8ef00",
+  "response": "```json\n{\n  \"reasoning\": \"A Vendor MSA with only 4 clauses is highly non-standard and poses a significant risk of missing critical protections. We must run Jurist for a baseline legal analysis of the existing clauses against our playbook. Benchmarker is required to provide market context on how these unusual terms compare to our precedents. Critically, Investigator is essential to identify the numerous key clauses (e.g., Liability, IP, Data Security) that are almost certainly absent from this sparse agreement.\"\n}\n```"
+}

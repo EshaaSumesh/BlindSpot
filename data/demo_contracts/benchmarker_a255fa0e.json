@@ -1,0 +1,4 @@
+{
+  "key": "a255fa0e125d308c2e25cc008d347085",
+  "response": "```json\n{\n  \"verdict\": \"market_standard\",\n  \"reasoning\": \"A 50/50 payment split is a common risk allocation. The deviation score of 1.0 confirms this clause is at the market median, making it standard.\"\n}\n```"
+}

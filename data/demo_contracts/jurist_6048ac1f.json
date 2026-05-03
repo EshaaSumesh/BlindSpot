@@ -1,0 +1,4 @@
+{
+  "key": "6048ac1ffcd8cec03e0d7e8384a3c68f",
+  "response": "```json\n{\n  \"verdict_label\": \"predatory\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"The trigger 'due to any reason whatsoever' imposes an overly broad and unfair risk.\",\n    \"The 24% interest rate is excessive and likely constitutes a penalty.\",\n    \"The flat INR 50,000 'inconvenience fee' is arbitrary, not a genuine loss estimate.\",\n    \"The combined penalties are disproportionate to the actual loss of Input Tax Credit.\"\n  ],\n  \"citations\": [\n    \"IS-010\",\n    \"LR-033\"\n  ],\n  \"enforceability_note\": \"Under Section 74 of the Indian Contract Act, 1872, courts will not enforce penalty clauses. The interest and fee would likely be reduced to reasonable compensation for actual loss, not the stipulated amounts.\"\n}\n```"
+}

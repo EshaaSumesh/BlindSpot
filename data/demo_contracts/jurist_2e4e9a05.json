@@ -1,0 +1,4 @@
+{
+  "key": "2e4e9a0583ead0e133356962c7e44470",
+  "response": "```json\n{\n  \"verdict_label\": \"predatory\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"The clause imposes a foreign governing law (Cayman Islands) on the freelancer.\",\n    \"It mandates litigation in a distant and prohibitively expensive foreign court.\",\n    \"This effectively denies the freelancer practical access to justice for disputes.\",\n    \"The clause may be void under Indian law as a restraint of legal proceedings.\"\n  ],\n  \"citations\": [\n    \"LR-038\"\n  ],\n  \"enforceability_note\": \"Under Section 28 of the Indian Contract Act, 1872, Indian courts may refuse to enforce this clause if the contract is performed in India, viewing it as an agreement that absolutely restricts a party from enforcing their rights through ordinary tribunals.\"\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "key": "9c882ed5205386c1b37e996d8eca50d2",
+  "response": "```json\n{\n  \"verdict_label\": \"predatory\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"The indemnification is one-sided, obligating only the service provider.\",\n    \"Liability is uncapped, creating unlimited financial risk for the freelancer.\",\n    \"The clause covers punitive and consequential damages, which is commercially unreasonable.\",\n    \"The 99-year survival period is excessive and disproportionate.\"\n  ],\n  \"citations\": [\n    \"LR-034\"\n  ],\n  \"enforceability_note\": null\n}\n```"
+}

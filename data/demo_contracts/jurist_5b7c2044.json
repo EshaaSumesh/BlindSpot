@@ -1,0 +1,4 @@
+{
+  "key": "5b7c2044ebc2da6ea6cf9a8eaa28bddf",
+  "response": "```json\n{\n  \"verdict_label\": \"predatory\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"The clause attempts to claim all IP created by the freelancer at any time in their life.\",\n    \"This improperly includes pre-existing works not related to the engagement.\",\n    \"It also covers future works completely unrelated to the client's project.\",\n    \"Such an overbroad assignment is likely unenforceable under the Indian Copyright Act.\"\n  ],\n  \"citations\": [\n    \"LR-001\",\n    \"IS-011\"\n  ],\n  \"enforceability_note\": \"Indian courts are highly unlikely to enforce an assignment of all past, present, and future unrelated IP. The clause's extreme overbreadth makes it unconscionable and contrary to the principles of the Copyright Act, which presumes the author is the first owner.\"\n}\n```"
+}

@@ -1,0 +1,4 @@
+{
+  "key": "d2796a2ba6fa2151bb61e5e8a6a4ca08",
+  "response": "```json\n{\n  \"verdict\": \"market_standard\",\n  \"reasoning\": \"The deviation score of 1.00 indicates the clause is at the market median. This is a standard document header and versioning format.\"\n}\n```"
+}

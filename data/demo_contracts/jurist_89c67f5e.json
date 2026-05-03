@@ -1,0 +1,4 @@
+{
+  "key": "89c67f5ee917f8b9afb596c13bb2ba1f",
+  "response": "```json\n{\n  \"verdict_label\": \"standard\",\n  \"severity\": \"medium\",\n  \"reasons\": [\n    \"The 50% upfront payment is a common and reasonable risk mitigation for freelancers.\",\n    \"A 7-day payment term for the balance is commercially standard and fair.\",\n    \"The clause lacks a provision for interest on late payments, creating asymmetric risk.\",\n    \"The term 'milestone completion' may be ambiguous without objective acceptance criteria.\"\n  ],\n  \"citations\": [\n    \"LR-020\",\n    \"LR-017\"\n  ],\n  \"enforceability_note\": null\n}\n```"
+}

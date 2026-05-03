@@ -1,0 +1,4 @@
+{
+  "key": "5442aa256ac4cdb2b47d2543e3e7bccb",
+  "response": "```json\n{\n  \"verdict_label\": \"standard\",\n  \"severity\": \"low\",\n  \"reasons\": [\n    \"This is a standard preamble identifying the agreement, its parties, and execution date.\",\n    \"The clause uses placeholders for specific details, which is normal for a template.\",\n    \"It does not contain any substantive legal obligations, rights, or restrictions.\",\n    \"The agreement is uncertain until the placeholders are filled, as required for a valid contract.\"\n  ],\n  \"citations\": [\n    \"IS-005\"\n  ],\n  \"enforceability_note\": null\n}\n```"
+}

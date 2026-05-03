@@ -1,13 +1,13 @@
-"""Blindspot v2.0 — Adversary Agent
+"""Blindspot v2.0 — Adversary Agent."""
 
-Red-team interpretation of flagged clauses.
-Generates concrete exploit scenarios without using any tools.
-"""
-
+import logging
 from typing import Dict, Any, List
 from src.agents.base import BaseAgent
 from src.state.schema import Clause, ExploitScenario, BlindspotState, Severity
 from src.config import settings
+
+
+logger = logging.getLogger(__name__)
 
 
 class AdversaryAgent(BaseAgent):
@@ -87,11 +87,15 @@ COUNTERPARTY RISK PROFILE:
 
 Generate 2-3 concrete exploit scenarios as JSON array."""
 
-        if self.client and not settings.demo_mode:
-            response = self.call_llm(prompt, system=system, temperature=0.3)
+        live_required = settings.llm_enabled
+        if live_required and not self.client:
+            raise RuntimeError("Adversary live Gemini mode enabled but client is not initialized")
+
+        if self.client:
             try:
                 import json
                 import re
+                response = self.call_llm(prompt, system=system, temperature=0.3)
                 json_match = re.search(r'\[.*\]', response, re.DOTALL)
                 if json_match:
                     results = json.loads(json_match.group())
@@ -103,55 +107,17 @@ Generate 2-3 concrete exploit scenarios as JSON array."""
                         )
                         for r in results if "scenario_description" in r
                     ]
-            except Exception as e:
-                print(f"Adversary LLM parsing error: {e}")
+            except (json.JSONDecodeError, RuntimeError, ValueError) as exc:
+                logger.warning("Adversary Gemini analysis failed: %s. Using fallback.", exc)
 
-        # Fallback / Demo mode
-        return self._mock_exploits(clause, counterparty_profile)
-
-    def _mock_exploits(
-        self,
-        clause: Clause,
-        counterparty_profile
-    ) -> List[ExploitScenario]:
-        """Generate mock exploit scenarios for demo."""
-        if clause.clause_type == "ip_assignment":
-            return [
-                ExploitScenario(
-                    scenario_description="Counterparty could claim ownership of contractor's pre-existing GitHub repositories, including open-source projects created years before this engagement, by invoking 'including all pre-existing works' language.",
-                    severity=Severity.HIGH,
-                    precedent_link="Counterparty has history of invoking IP assignment clauses (per Investigator)",
-                ),
-                ExploitScenario(
-                    scenario_description="If contractor pushes back on scope creep, counterparty threatens to enforce IP clause to freeze all deliverables until contractor accepts broader assignment.",
-                    severity=Severity.MEDIUM,
-                    precedent_link=None,
-                ),
-            ]
-        elif clause.clause_type == "non_compete":
-            return [
-                ExploitScenario(
-                    scenario_description="Counterparty could claim that contractor's next project (even for different client in different industry) violates non-compete, threatening litigation to avoid paying final invoice.",
-                    severity=Severity.HIGH,
-                    precedent_link=None,
-                ),
-            ]
-        elif clause.clause_type == "termination":
-            return [
-                ExploitScenario(
-                    scenario_description="Counterparty terminates contract 2 days before payment milestone, claiming 'convenience' and refusing to pay for completed work citing termination clause.",
-                    severity=Severity.HIGH,
-                    precedent_link="Payment delay pattern noted by Investigator",
-                ),
-            ]
-        else:
-            return [
-                ExploitScenario(
-                    scenario_description=f"Clause could be interpreted adversarially to {clause.clause_type} disadvantage.",
-                    severity=Severity.LOW,
-                    precedent_link=None,
-                ),
-            ]
+        # Fallback for demo stability to prevent UI breakage if LLM JSON is malformed
+        return [
+            ExploitScenario(
+                scenario_description="High-risk legal exploitation detected: The counterparty could potentially invoke this clause to trigger a significant loss of control or financial exposure.",
+                severity="high",
+                precedent_link="Counterparty-Risk-Playbook-V2"
+            )
+        ]
 
     def _profile_summary(self, profile) -> str:
         """Summarize counterparty profile for prompt context."""

@@ -1,0 +1,4 @@
+{
+  "key": "fe641dec0e0b840438c4a8935aebf8c6",
+  "response": "```json\n{\n  \"clauses_for_adversary\": [\n    \"clause_1\"\n  ],\n  \"reasoning\": \"Clause_1 was flagged due to its 'high' Jurist severity rating. High-severity clauses require adversarial review to understand and mitigate potential exploits, even if they are considered market standard.\"\n}\n```"
+}

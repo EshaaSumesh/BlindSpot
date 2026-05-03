@@ -1,0 +1,4 @@
+{
+  "key": "c5471e867b894d702a40af2452bbcffb",
+  "response": "```json\n{\n  \"verdict_label\": \"standard\",\n  \"severity\": \"low\",\n  \"reasons\": [\n    \"The text is a standard contract title and preamble.\",\n    \"It does not contain any substantive legal obligations.\",\n    \"This is a typical introductory section for an agreement.\",\n    \"No legal rules are violated by this introductory text.\"\n  ],\n  \"citations\": [],\n  \"enforceability_note\": null\n}\n```"
+}

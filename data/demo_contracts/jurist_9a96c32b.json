@@ -1,0 +1,4 @@
+{
+  "key": "9a96c32b27fde92a35a6796058eae8ef",
+  "response": "```json\n{\n  \"verdict_label\": \"predatory\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"Freelancers are the default first owners of their work's copyright.\",\n    \"The clause likely assigns the contractor's pre-existing background IP.\",\n    \"IP assignments require specific written terms to be valid in India.\",\n    \"The client's failure to use assigned IP can cause it to lapse.\"\n  ],\n  \"citations\": [\n    \"LR-006\",\n    \"IS-011\",\n    \"IS-013\",\n    \"IS-014\"\n  ],\n  \"enforceability_note\": \"Under the Indian Copyright Act, 1957, this assignment is only enforceable if it is written, signed, and specifies the work, rights, duration,"
+}

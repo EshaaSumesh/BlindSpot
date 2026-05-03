@@ -1,0 +1,4 @@
+{
+  "key": "4f09ac0b2b8efa75042989fb50d034b4",
+  "response": "```json\n{\n  \"verdict_label\": \"predatory\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"Mandates a foreign governing law (Cayman Islands) for a domestic service contract.\",\n    \"Forces litigation in a distant and expensive foreign jurisdiction.\",\n    \"Effectively denies the freelancer access to justice due to high costs.\",\n    \"May be void under Indian law as a restraint on legal proceedings.\"\n  ],\n  \"citations\": [\n    \"LR-038\"\n  ],\n  \"enforceability_note\": \"Under Section 28 of the Indian Contract Act, 1872, agreements that absolutely restrict a party from enforcing their rights through ordinary legal proceedings are void. Indian courts may refuse to enforce this clause.\"\n}\n```"
+}

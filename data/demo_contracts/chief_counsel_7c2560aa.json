@@ -1,0 +1,4 @@
+{
+  "key": "7c2560aaa42d2c1a82b376c94c73e301",
+  "response": "```json\n{\n  \"clauses_for_adversary\": [\n    \"clause_1\"\n  ],\n  \"reasoning\": \"Flagged clause_1 due to its 'medium' severity rating from the Jurist verdict, which requires adversarial review even if the clause is considered market standard.\"\n}\n```"
+}

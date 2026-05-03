@@ -1,0 +1,4 @@
+{
+  "key": "98ec90e9cb51e9108e141d41832960e0",
+  "response": "```json\n{\n  \"verdict_label\": \"standard\",\n  \"severity\": \"low\",\n  \"reasons\": [\n    \"The clause correctly protects the freelancer's pre-existing intellectual property.\",\n    \"It clearly defines that the client only receives a license, not ownership.\",\n    \"This structure prevents the accidental transfer of the freelancer's core assets.\",\n    \"The clause is a model example of avoiding background IP contamination.\"\n  ],\n  \"citations\": [\n    \"LR-006\"\n  ],\n  \"enforceability_note\": null\n}\n```"
+}

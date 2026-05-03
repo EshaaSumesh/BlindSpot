@@ -1,0 +1,4 @@
+{
+  "key": "ea8d13f68584eb633cbc99bf2dfb5d71",
+  "response": "```json\n{\n  \"clauses_for_adversary\": [\n    \"clause_1\",\n    \"clause_2\",\n    \"clause_3\",\n    \"clause_4\"\n  ],\n  \"reasoning\": \"All clauses were flagged for adversary analysis because they were rated as 'high' severity. Clauses 1 and 3 are especially critical as they are also 'outliers' from market standards.\"\n}\n```"
+}

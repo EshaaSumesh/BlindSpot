@@ -1,0 +1,4 @@
+{
+  "key": "1c566ffa65bfcb69234438f353d66ed5",
+  "response": "```json\n{\n  \"doc_type\": \"nda\",\n  \"doc_type_confidence\": 0.9,\n  \"clauses\": [\n    {\n      \"id\": \"clause_1\",\n      \"section_header\": \"INTELLECTUAL PROPERTY OWNERSHIP\",\n      \"text\": \"The Contractor hereby irrevocably assigns, transfers,"
+}

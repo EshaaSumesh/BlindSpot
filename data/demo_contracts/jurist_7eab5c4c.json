@@ -1,0 +1,4 @@
+{
+  "key": "7eab5c4c5c41dcac527120592fb9104f",
+  "response": "```json\n{\n  \"verdict_label\": \"unenforceable\",\n  \"severity\": \"high\",\n  \"reasons\": [\n    \"The provided text is a document title, not an operative clause.\",\n    \"The text is incomplete and lacks any substantive legal terms.\",\n    \"As presented, the clause is void for uncertainty.\",\n    \"It fails to meet the basic requirements for a valid IP assignment.\"\n  ],\n  \"citations\": [\n    \"LR-023\",\n    \"IS-013\"\n  ],\n  \"enforceability_note\": \"This text is a document header, not a contractual term. It creates no legal rights or obligations and is entirely unenforceable as a clause.\"\n}\n```"
+}

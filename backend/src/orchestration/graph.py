@@ -1,5 +1,6 @@
 """Blindspot v2.0 — Orchestration Graph."""
 
+import asyncio
 from pydantic import BaseModel
 from src.state.schema import BlindspotState
 from src.agents.scout import ScoutAgent
@@ -84,75 +85,99 @@ class BlindspotGraph:
 
         return state
 
+    def _run_agent(self, name: str, state: BlindspotState):
+        """Run one agent against shared state and return its mutation."""
+        self.agents[name].set_state(state)
+        return self.agents[name].run()
+
+    def _apply_result(self, state: BlindspotState, result):
+        """Apply state mutation dict to shared state."""
+        for key, value in result.items():
+            setattr(state, key, value)
+
     async def arun_with_events(self, initial_state: BlindspotState):
         """Execute with SSE event emission."""
         state = initial_state
 
         # Scout
-        yield {"event": "scout_start", "data": ""}
-        self.agents["scout"].set_state(state)
-        result = self.agents["scout"].run()
-        for k, v in result.items():
-            setattr(state, k, v)
+        yield {"event": "scout_start", "data": {}}
+        result = self._run_agent("scout", state)
+        self._apply_result(state, result)
         clauses_data = _jsonable(state.scout_output.clauses) if state.scout_output else []
         yield {"event": "scout_complete", "data": {"clauses": clauses_data}}
 
         # Planner
+        await asyncio.sleep(1)
+        yield {"event": "chief_counsel_start", "data": {"mode": "planner"}}
         self.agents["chief_counsel"].set_state(state)
         plan = self.agents["chief_counsel"].run_planner()
         state.plan = plan
+        yield {"event": "chief_counsel_planned", "data": {"plan": _jsonable(plan)}}
 
-        # Investigator
-        yield {"event": "investigator_start", "data": ""}
-        self.agents["investigator"].set_state(state)
-        result = self.agents["investigator"].run()
-        for k, v in result.items():
-            setattr(state, k, v)
-        yield {"event": "investigator_complete", "data": _jsonable(result.get("investigator_profile", {}))}
-
-        # Jurist
-        yield {"event": "jurist_start", "data": ""}
-        self.agents["jurist"].set_state(state)
-        result = self.agents["jurist"].run()
-        for k, v in result.items():
-            setattr(state, k, v)
-        yield {"event": "jurist_complete", "data": {"verdicts": len(result.get("jurist_verdicts", {}))}}
-
-        # Benchmarker
-        yield {"event": "benchmarker_start", "data": ""}
-        self.agents["benchmarker"].set_state(state)
-        result = self.agents["benchmarker"].run()
-        for k, v in result.items():
-            setattr(state, k, v)
-        yield {"event": "benchmarker_complete", "data": {"scores": len(result.get("benchmark_scores", {}))}}
-
+        # Investigator, Jurist, Benchmarker
+        sequential_agents = ["investigator", "jurist", "benchmarker"]
+        for name in sequential_agents:
+            yield {"event": f"{name}_start", "data": {}}
+            await asyncio.sleep(1)
+            result = await asyncio.to_thread(self._run_agent, name, state)
+            self._apply_result(state, result)
+            
+            if name == "investigator":
+                yield {
+                    "event": "investigator_complete",
+                    "data": {"investigator_profile": _jsonable(result.get("investigator_profile"))},
+                }
+            elif name == "jurist":
+                yield {
+                    "event": "jurist_complete",
+                    "data": {"jurist_verdicts": _jsonable(result.get("jurist_verdicts", {}))},
+                }
+            elif name == "benchmarker":
+                yield {
+                    "event": "benchmarker_complete",
+                    "data": {"benchmark_scores": _jsonable(result.get("benchmark_scores", {}))},
+                }
         # Router
         self.agents["chief_counsel"].set_state(state)
         routing = self.agents["chief_counsel"].run_router()
         state.routing_decision = routing
+        yield {"event": "chief_counsel_routed", "data": {"routing_decision": _jsonable(routing)}}
 
         # Adversary (conditional)
         if routing and routing.clauses_for_adversary:
-            yield {"event": "adversary_start", "data": ""}
-            self.agents["adversary"].set_state(state)
-            result = self.agents["adversary"].run()
-            for k, v in result.items():
-                setattr(state, k, v)
-            yield {"event": "adversary_complete", "data": _jsonable(result.get("exploits", {}))}
+            await asyncio.sleep(1)
+            yield {"event": "adversary_start", "data": {}}
+            result = self._run_agent("adversary", state)
+            self._apply_result(state, result)
+            yield {
+                "event": "adversary_complete",
+                "data": {"exploits": _jsonable(result.get("exploits", {}))},
+            }
 
         # Negotiator
-        yield {"event": "negotiator_start", "data": ""}
-        self.agents["negotiator"].set_state(state)
-        result = self.agents["negotiator"].run()
-        for k, v in result.items():
-            setattr(state, k, v)
-        yield {"event": "negotiator_complete", "data": {"rewrites": len(result.get("rewrites", {}))}}
+        await asyncio.sleep(1)
+        yield {"event": "negotiator_start", "data": {}}
+        result = self._run_agent("negotiator", state)
+        self._apply_result(state, result)
+        yield {
+            "event": "negotiator_complete",
+            "data": {
+                "rewrites": _jsonable(result.get("rewrites", {})),
+                "redlined_docx_path": result.get("redlined_docx_path"),
+                "negotiation_email_draft": result.get("negotiation_email_draft"),
+            },
+        }
 
         # Reconciler
         self.agents["chief_counsel"].set_state(state)
         reconciliation = self.agents["chief_counsel"].run_reconciler()
-        for k, v in reconciliation.items():
-            setattr(state, k, v)
+        self._apply_result(state, reconciliation)
         yield {"event": "chief_counsel_synthesis", "data": _jsonable(reconciliation.get("final_synthesis", {}))}
-
-        yield {"event": "final_report", "data": {"status": "complete"}}
+        yield {
+            "event": "chief_counsel_complete",
+            "data": {
+                "mode": "reconciler",
+                "final_synthesis": _jsonable(reconciliation.get("final_synthesis", {})),
+                "inter_agent_conflicts": _jsonable(reconciliation.get("inter_agent_conflicts", [])),
+            },
+        }

@@ -5,6 +5,8 @@ Generates rewrites, redlined .docx, and negotiation email draft.
 """
 
 import json
+import re
+import logging
 from typing import Dict, Any, List
 from src.agents.base import BaseAgent
 from src.state.schema import (
@@ -14,6 +16,9 @@ from src.state.schema import (
 from src.tools.docx_generator import DocxRedliner
 from src.tools.email_renderer import EmailRenderer
 from src.config import settings
+
+
+logger = logging.getLogger(__name__)
 
 
 class NegotiatorAgent(BaseAgent):
@@ -60,13 +65,9 @@ class NegotiatorAgent(BaseAgent):
         score: BenchmarkResult,
         exploit_scenarios: List[ExploitScenario],
     ) -> Rewrite:
-        """Create rewrite based on all prior analysis."""
+        """Create rewrite based on all prior analysis using LLM."""
 
-        if verdict and verdict.verdict_label in ["predatory", "unenforceable"]:
-            return self._rewrite_predatory(clause, verdict)
-        elif verdict and verdict.verdict_label == "non_standard":
-            return self._rewrite_nonstandard(clause, verdict, score)
-        else:
+        if verdict and verdict.verdict_label == "standard" and (not score or score.verdict == "market_standard"):
             # Standard clause — no rewrite needed
             return Rewrite(
                 original_text=clause.text,
@@ -76,63 +77,46 @@ class NegotiatorAgent(BaseAgent):
                 walk_away_threshold="Not applicable — standard clause",
             )
 
-    def _rewrite_predatory(self, clause: Clause, verdict: LegalVerdict) -> Rewrite:
-        """Rewrite a predatory/unenforceable clause."""
+        system = """You are the Negotiator Agent. Your task is to rewrite a problematic clause based on legal analysis and benchmarks.
+Output a JSON object with:
+{
+  "proposed_text": "string (the primary rewrite to propose)",
+  "rationale": "string (brief explanation of the change)",
+  "fallback_text": "string (a compromise version if counterparty pushes back)",
+  "walk_away_threshold": "string (at what point we should abandon negotiation on this point)"
+}"""
+        
+        prompt = f"Clause Type: {clause.clause_type}\nOriginal Text: {clause.text}\n"
+        if verdict:
+            prompt += f"Jurist Verdict: {verdict.verdict_label} (Severity: {verdict.severity})\n"
+            prompt += f"Jurist Reasons: {verdict.reasons}\n"
+        if score:
+            prompt += f"Benchmarker Score: {score.deviation_score} ({score.verdict})\n"
+        if exploit_scenarios:
+            prompt += f"Exploits: {[e.scenario_description for e in exploit_scenarios]}\n"
 
-        if clause.clause_type == "ip_assignment":
-            proposed = "Contractor assigns to Client all work product created specifically during the term of this engagement. Pre-existing IP, tools, and frameworks remain the property of the Contractor."
-            rationale = "Narrow IP assignment to engagement-specific deliverables only, excluding pre-existing works."
-            fallback = "Contractor assigns work product created for Client during this engagement. All pre-existing IP is expressly excluded."
-            walk_away = "Any assignment of pre-existing IP, tools, or frameworks"
-        elif clause.clause_type == "non_compete":
-            proposed = "During the term of this engagement, Contractor shall not compete directly with Client's specific product lines. This restriction expires upon contract termination."
-            rationale = "Non-compete void under Indian Contract Act §27 beyond engagement term. Limited to term only."
-            fallback = "Contractor shall not solicit Client's direct customers during engagement term."
-            walk_away = "Any post-term non-compete obligation"
-        elif clause.clause_type == "termination":
-            proposed = "Either party may terminate this agreement with 30 days' written notice. Upon termination for convenience, Client shall pay for all work completed plus 20% of remaining contract value."
-            rationale = "Symmetric notice period with kill fee for termination without cause."
-            fallback = "Either party may terminate with 30 days' notice. Payment due for all work completed."
-            walk_away = "Asymmetric notice periods or no kill fee on convenience termination"
-        else:
-            proposed = f"[REVISED] {clause.text[:100]}..."
-            rationale = verdict.reasons[0] if verdict.reasons else "Clause requires revision per legal analysis."
-            fallback = clause.text
-            walk_away = "Unacceptable clause terms per legal verdict"
-
+        try:
+            resp = self.call_llm(prompt, system=system, temperature=0.2)
+            match = re.search(r'\{.*\}', resp, re.DOTALL)
+            if match:
+                data = json.loads(match.group())
+                return Rewrite(
+                    original_text=clause.text,
+                    proposed_text=data.get("proposed_text", clause.text),
+                    rationale=data.get("rationale", "Revised based on legal analysis."),
+                    fallback_text=data.get("fallback_text", clause.text),
+                    walk_away_threshold=data.get("walk_away_threshold", "Unacceptable terms.")
+                )
+        except Exception as e:
+            logger.error(f"Negotiator LLM failed for clause {clause.id}: {e}")
+        
+        # Fallback if LLM fails
         return Rewrite(
             original_text=clause.text,
-            proposed_text=proposed,
-            rationale=rationale[:200],
-            fallback_text=fallback,
-            walk_away_threshold=walk_away,
-        )
-
-    def _rewrite_nonstandard(self, clause: Clause, verdict: LegalVerdict, score: BenchmarkResult) -> Rewrite:
-        """Rewrite a non-standard clause to align with market norms."""
-
-        if clause.clause_type == "termination":
-            proposed = "Either party may terminate this agreement with 30 days' written notice. Notice periods shall be identical for both parties."
-            rationale = "Standardize notice period to 30 days, symmetric for both parties."
-            fallback = "Contractor may terminate with 30 days' notice, matching client's notice period."
-            walk_away = "Notice period exceeding 45 days for contractor"
-        elif clause.clause_type == "payment":
-            proposed = "Client shall pay Contractor within 30 days of invoice approval. Late payments accrue interest at 18% per annum."
-            rationale = "Align payment terms to 30 days with statutory interest for delays."
-            fallback = "Payment within 30 days of invoice. Late fees apply per MSMED Act."
-            walk_away = "Payment terms exceeding 45 days"
-        else:
-            proposed = f"[REVISED] {clause.text[:100]}..."
-            rationale = f"Deviation score {score.deviation_score:.1f}x market median. Align with standard practice."
-            fallback = clause.text
-            walk_away = "Refusal to align with market standards"
-
-        return Rewrite(
-            original_text=clause.text,
-            proposed_text=proposed,
-            rationale=rationale[:200],
-            fallback_text=fallback,
-            walk_away_threshold=walk_away,
+            proposed_text=f"[REVISED] {clause.text[:100]}...",
+            rationale="Revision required based on legal/benchmark analysis.",
+            fallback_text=clause.text,
+            walk_away_threshold="Unacceptable clause terms"
         )
 
     def _generate_redline(self, clauses: List[Clause], rewrites: Dict[str, Rewrite]) -> str:
@@ -141,10 +125,10 @@ class NegotiatorAgent(BaseAgent):
             generator = DocxRedliner()
             return generator.create_redline(
                 clauses, rewrites,
-                output_path="./generated/redlined_contract.docx"
+                output_path=settings.redline_output_path
             )
-        except Exception as e:
-            print(f"Redline generation failed: {e}")
+        except Exception as exc:
+            logger.warning("Redline generation failed: %s", exc)
             return None
 
     def _generate_email(self, rewrites: Dict[str, Rewrite]) -> str:
